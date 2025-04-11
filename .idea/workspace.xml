@@ -4,69 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f1eb7bc-6999-4c00-9b3a-f291104d7b7d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/SOTF___Extra_Combat_Objectives_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/GraphicsLib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/LunaLib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/MagicLib_Kotlin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jars.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lazylib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/secretsofthefrontier.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/starsector_core.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Run_Starsector.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SOTF - Extra Combat Objectives.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SOTFECO.version" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/changelog.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/config/LunaSettings.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/config/battle_objectives.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/config/modFiles/magicTrail_data.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/config/sotf/emplacement_variants.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/config/sotf/modder_instructions.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/config/sotf/objective_spawns.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/config/sounds.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/config/version/version_files.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/hullmods/hull_mods.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/hulls/SOTFECO_shieldDrone.ship" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/hulls/ship_data.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/hulls/skins/sotf_lidarnode_ASB.skin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/hulls/skins/sotf_lidarnode_ASB_kinetic.skin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/hulls/skins/sotf_lidarnode_shield.skin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/shipsystems/SOTFCEO_ASBuplink.system" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/shipsystems/SOTFCEO_ASBuplink_kinetic.system" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/shipsystems/ship_systems.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/strings/descriptions.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/variants/SOTFECO_shieldDrone_shield.variant" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/variants/sotf_lidarnode_AntiShipBattery.variant" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/variants/sotf_lidarnode_AntiShipBattery_kinetic.variant" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/variants/sotf_lidarnode_LRM_two.variant" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/variants/sotf_lidarnode_Mines_two.variant" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/variants/sotf_lidarnode_Shield.variant" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/weapons/SOTFECO_ASBIndicator.wpn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/weapons/SOTFECO_asb_kinetic.wpn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/weapons/proj/SOTFECO_ASBIndicatorMine.proj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/weapons/proj/SOTFECO_asb_shot_kinetic.proj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/weapons/weapon_data.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/ships/emplacements/SOTFECO_shieldNode.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/ships/emplacements/SOTFECO_shieldworks.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/SOTFECO.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/SOFTECO_modPlugin.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/SOTFCEOASBScript.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/SOTFCEOASBScriptHE.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/SOTFCEOASBScriptKinetic.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/SOTFECO_settings.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_dwellerBeacon.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/hullmods/BubbleShield.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/hullmods/ForceUseSystem.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mod_info.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sounds/SOTFECOASBTargetWarning.ogg" afterDir="false" />
+    <list default="true" id="3f1eb7bc-6999-4c00-9b3a-f291104d7b7d" name="Changes" comment="two">
+      <change beforePath="$PROJECT_DIR$/SOTFECO.version" beforeDir="false" afterPath="$PROJECT_DIR$/SOTFECO.version" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +20,37 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="release" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1744392359" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="release" />
+                    <option name="lastUsedInstant" value="1744392347" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -120,7 +89,40 @@
       <option name="presentableId" value="Default" />
       <updated>1744156841616</updated>
     </task>
+    <task id="LOCAL-00001" summary="initial">
+      <option name="closed" value="true" />
+      <created>1744392236798</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1744392236798</updated>
+    </task>
+    <task id="LOCAL-00002" summary="two">
+      <option name="closed" value="true" />
+      <created>1744392321425</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1744392321425</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial" />
+    <MESSAGE value="two" />
+    <option name="LAST_COMMIT_MESSAGE" value="two" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

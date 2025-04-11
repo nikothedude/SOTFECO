@@ -14,7 +14,7 @@
     # created after October 2012 will not have a Public folder, unfortunately.
     #
     # Example links for common hosts:
-    "masterVersionFile":"TODO",
+    "masterVersionFile":"https://raw.githubusercontent.com/nikothedude/SOTFECO/refs/heads/release/SOTFECO.version",
 
     "modName":"More Planetary Conditions",
 
