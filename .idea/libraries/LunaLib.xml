@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="LunaLib">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../LunaLib/jars" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../LunaLib/src" />
+    </SOURCES>
+  </library>
+</component>

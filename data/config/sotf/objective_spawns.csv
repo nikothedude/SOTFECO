@@ -1,0 +1,8 @@
+id,obj_id,tag,hyperspace,escape,central_spawn,minFP,maxFP,weight
+sotfCEO_systems_empl_shield,sotfCEO_objective_empl_shieldGen,,,false,true,120,,0.2
+sotfCEO_systems_empl_shield_ruins,sotfCEO_objective_empl_shieldGen,theme_ruins,,false,true,120,,0.6
+sotf_systems_empl,sotf_objective_empl,,false,,true,150,,0.1
+sotf_ruins_empl,sotf_objective_empl,theme_ruins,,,true,150,,0.6
+softCEO_hyperspace_dweller_beacon,softCEO_objective_dweller_beacon,,true,,true,200,,0.1
+sotfCEO_systems_objective_ASB,sotfCEO_objective_ASB,,,false,true,150,,0.15
+sotfCEO_ruins_objective_ASB,sotfCEO_objective_ASB,theme_ruins,,false,true,120,,1.1

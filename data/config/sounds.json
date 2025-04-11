@@ -1,0 +1,7 @@
+{
+	"SOTFECOASBTargetWarning":{
+		"sounds":[
+			{"file":"sounds/SOTFECOASBTargetWarning.ogg","pitch":1,"volume":1},
+		],
+	},
+},

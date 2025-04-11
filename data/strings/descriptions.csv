@@ -1,0 +1,5 @@
+id,type,text1,text2,text3,text4,notes
+SOTFECO_shieldNode,SHIP,"A modified lidar node, harboring an extremely powerful shield generator capable of protecting a small squad of ships.",,,,
+,,,,,,
+SOTFCEO_ASBuplink,SHIP_SYSTEM,"Desigates the target to be struck by a distant ASB platform. After a short delay, the ASB fires a projectile capable of 4000 HE damage with extreme speed.",Offensive,"Desigates the target to be struck by a distant ASB platform. After a short delay, the ASB fires a projectile capable of 4000 HE damage with extreme speed.",4000 HE,
+SOTFCEO_ASBuplink_kinetic,SHIP_SYSTEM,"Desigates the target to be struck by a distant ASB platform. After a short delay, the ASB fires a projectile capable of 4000 kinetic damage with extreme speed.",Offensive,"Desigates the target to be struck by a distant ASB platform. After a short delay, the ASB fires a projectile capable of 4000 kinetic damage with extreme speed.",4000 kinetic,

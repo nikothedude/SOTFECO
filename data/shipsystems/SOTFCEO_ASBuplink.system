@@ -1,0 +1,19 @@
+{
+	"id":"SOTFCEO_ASBuplink",
+	"type":"STAT_MOD",
+	"aiType":"ENTROPY_AMPLIFIER",
+	
+	"statsScript":"SOTFECO.SOTFCEOASBScriptHE",
+
+	#"runScriptWhilePaused":true, # only for the player's ship
+	#"runScriptWhileIdle":true, # unapply() never gets called
+		
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+	}
+}
+
+
+
+

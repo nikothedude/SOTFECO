@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="lazylib">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../LazyLib/jars" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../LazyLib/javadoc.zip!/" />
+    </JAVADOC>
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../LazyLib/jars" recursive="false" />
+  </library>
+</component>

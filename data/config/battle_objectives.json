@@ -1,0 +1,42 @@
+{
+  "sotfCEO_objective_empl_shieldGen":{
+    "name":"Shield Generator",
+    "icon":"graphics/warroom/sotf_objective_empl.png",
+    "sprite":"graphics/ships/deployables/mini_navbeacon.png",
+    "spriteScale":1,
+    "captureTime":5,
+    "battleSizeFractionBonus":0.04,
+    "effectClass":"data.scripts.combat.obj.SotfEmplacementEffect",
+  },
+  
+  	# not a "real" reinforcer but close enough
+	"softCEO_objective_dweller_beacon":{
+		"name":"Strange Light",
+		"icon":"graphics/warroom/sotf_objective_unknown.png",
+		"sprite":"graphics/fx/empty.png",
+		"spriteScale":1,
+		"captureTime":75,
+		"battleSizeFractionBonus":0,
+		"effectClass":"SOTFECO.combatObj.SOTFCEO_dwellerBeacon",
+	},
+	
+	"sotfCEO_objective_ASB":{
+		"name":"ASB Uplink",
+		"icon":"graphics/warroom/sotf_objective_empl.png",
+		"sprite":"graphics/fx/empty.png",
+		"spriteScale":1,
+		"captureTime":5,
+		"battleSizeFractionBonus":0.04,
+		"effectClass":"data.scripts.combat.obj.SotfEmplacementEffect",
+	},
+	
+	"softCEO_objective_mote_sink":{
+		"name":"Siegeworks Uplink",
+		"icon":"graphics/warroom/sotf_objective_empl.png",
+		"sprite":"graphics/fx/empty.png",
+		"spriteScale":1,
+		"captureTime":5,
+		"battleSizeFractionBonus":0.04,
+		"effectClass":"data.scripts.combat.obj.SotfEmplacementEffect",
+	},
+}

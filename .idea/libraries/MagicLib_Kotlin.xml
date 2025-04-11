@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="MagicLib-Kotlin">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../MagicLib-1.5.1/jars/MagicLib-Kotlin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../MagicLib-1.5.1/jars/MagicLib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../MagicLib-1.5.1/jars/MagicLib-Kotlin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../MagicLib-1.5.1/jars/MagicLib.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../MagicLib-1.5.1/jars/MagicLib.jar!/" />
+      <root url="file://$PROJECT_DIR$/../MagicLib-1.5.1/src" />
+      <root url="file://$PROJECT_DIR$/../MagicLib-1.5.1/src" />
+      <root url="file://$PROJECT_DIR$/../MagicLib-1.5.1" />
+      <root url="file://$PROJECT_DIR$/../MagicLib-1.5.1/src" />
+      <root url="file://$PROJECT_DIR$/../MagicLib-1.5.1/MagicLib-Kotlin" />
+    </SOURCES>
+  </library>
+</component>

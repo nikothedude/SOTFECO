@@ -1,0 +1,8 @@
+id,obj_id,extra_distance,weight
+sotf_lidarnode_Shield,sotfCEO_objective_empl_shieldGen,0,0.5
+,,,
+sotf_lidarnode_LRM_two,sotf_objective_empl_t2,0,0.8
+sotf_lidarnode_Mines_two,sotf_objective_empl_t2,0,0.8
+,,,
+sotf_lidarnode_AntiShipBattery,sotfCEO_objective_ASB,0,1
+sotf_lidarnode_AntiShipBattery_kinetic,sotfCEO_objective_ASB,0,1
