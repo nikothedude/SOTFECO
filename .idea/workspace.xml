@@ -4,8 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f1eb7bc-6999-4c00-9b3a-f291104d7b7d" name="Changes" comment="two">
+    <list default="true" id="3f1eb7bc-6999-4c00-9b3a-f291104d7b7d" name="Changes" comment="forum">
+      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/ai/SOTFCEOASBAIScript.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/starsector_core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/starsector_core.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOTF - Extra Combat Objectives.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SOTF - Extra Combat Objectives.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SOTFECO.version" beforeDir="false" afterPath="$PROJECT_DIR$/SOTFECO.version" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changelog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/changelog.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/config/battle_objectives.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/config/battle_objectives.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hullmods/hull_mods.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/hullmods/hull_mods.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hulls/skins/sotf_lidarnode_ASB.skin" beforeDir="false" afterPath="$PROJECT_DIR$/data/hulls/skins/sotf_lidarnode_ASB.skin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hulls/skins/sotf_lidarnode_ASB_kinetic.skin" beforeDir="false" afterPath="$PROJECT_DIR$/data/hulls/skins/sotf_lidarnode_ASB_kinetic.skin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/shipsystems/SOTFCEO_ASBuplink.system" beforeDir="false" afterPath="$PROJECT_DIR$/data/shipsystems/SOTFCEO_ASBuplink.system" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/shipsystems/SOTFCEO_ASBuplink_kinetic.system" beforeDir="false" afterPath="$PROJECT_DIR$/data/shipsystems/SOTFCEO_ASBuplink_kinetic.system" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/shipsystems/ship_systems.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/shipsystems/ship_systems.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/SOTFECO.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jars/SOTFECO.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/SOTFCEOASBScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/SOTFCEOASBScript.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/hullmods/BubbleShield.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/hullmods/BubbleShield.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mod_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/mod_info.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +44,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;nikothedude&quot;
+  }
+}</component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
       <RecentBranches>
@@ -37,11 +60,11 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1744392359" />
+                    <option name="lastUsedInstant" value="1744393296" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="release" />
-                    <option name="lastUsedInstant" value="1744392347" />
+                    <option name="lastUsedInstant" value="1744393288" />
                   </RecentBranch>
                 </list>
               </option>
@@ -52,6 +75,12 @@
       </RecentBranches>
     </option>
   </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/nikothedude/SOTFECO&quot;,
+    &quot;accountId&quot;: &quot;f226f0a4-01a8-4fff-8bb0-879573ab9a5b&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -67,8 +96,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Starsector/mods/More Combat Terrain Effects",
+    "last_opened_file_path": "C:/Starsector/mods/SOTF - Extra Combat Objectives",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15332031",
     "project.structure.side.proportion": "0.20689656",
@@ -105,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744392321425</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="forum">
+      <option name="closed" value="true" />
+      <created>1744393283415</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1744393283415</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,7 +161,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial" />
     <MESSAGE value="two" />
-    <option name="LAST_COMMIT_MESSAGE" value="two" />
+    <MESSAGE value="forum" />
+    <option name="LAST_COMMIT_MESSAGE" value="forum" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -145,6 +185,7 @@
         <watch expression="objective.getType()" language="JAVA" />
         <watch expression="row.getString(&quot;id&quot;)" language="JAVA" />
         <watch expression="ASBScript" language="kotlin" />
+        <watch expression="picker" language="kotlin" />
       </configuration>
     </watches-manager>
   </component>

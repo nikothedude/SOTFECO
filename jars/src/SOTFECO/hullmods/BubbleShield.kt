@@ -10,7 +10,7 @@ import org.lwjgl.util.vector.Vector2f
 class BubbleShield: BaseHullMod() {
 
     companion object {
-        const val SHIELD_STRENGTH = 35000f
+        const val SHIELD_STRENGTH = 50000f
         const val CONSTANT_DISSIPATION = 250f
         const val UNFOLD_RATE_MULT = 3f
 

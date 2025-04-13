@@ -13,13 +13,14 @@ import com.fs.starfarer.api.plugins.ShipSystemStatsScript
 import com.fs.starfarer.api.util.IntervalUtil
 import com.fs.starfarer.api.util.Misc
 import data.scripts.combat.SotfASBLockOnScript
+import org.apache.log4j.Priority
 import org.lazywizard.lazylib.VectorUtils
 import org.lwjgl.util.vector.Vector2f
 
 abstract class SOTFCEOASBScript : BaseShipSystemScript() {
 
     companion object {
-        const val RANGE = 7000f
+        const val RANGE = 10000f
         const val CD_KEY = "SOTFCEO_ASBLocking"
         const val MARK_KEY = "\$SOTFCEO_ASBMark"
 
@@ -38,6 +39,7 @@ abstract class SOTFCEOASBScript : BaseShipSystemScript() {
 
         val ship = stats.entity as? ShipAPI ?: return
         val target = findTarget(ship) ?: return
+        val moduleCore = target.parentStation ?: ship
 
         val params = SotfASBLockOnScript.ASBParams(
             ship,
@@ -47,14 +49,17 @@ abstract class SOTFCEOASBScript : BaseShipSystemScript() {
         )
         if (DO_PLAYER_ASB_WARNING && target.owner == 0 && !target.isAlly && !target.isFighter) {
         //if (target.isAlly) {
-            Global.getCombatEngine().combatUI.addMessage(
-                0,
-                target,
-                Misc.getPositiveHighlightColor(),
-                target.name,
-                Misc.getNegativeHighlightColor(),
-                " TARGETED BY ${getTypeString()} ASB!"
-            )
+            if (moduleCore.name != null) {
+                Global.getCombatEngine().combatUI.addMessage(
+                    0,
+                    moduleCore,
+                    Misc.getPositiveHighlightColor(),
+                    moduleCore.name,
+                    Misc.getNegativeHighlightColor(),
+                    " TARGETED BY ${getTypeString()} ASB!"
+                )
+            }
+
             Global.getSoundPlayer().playUISound("SOTFECOASBTargetWarning", 0.6f, 0.4f)
         }
         Global.getCombatEngine().addFloatingText(

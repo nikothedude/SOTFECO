@@ -16,7 +16,7 @@
     # Example links for common hosts:
     "masterVersionFile":"https://raw.githubusercontent.com/nikothedude/SOTFECO/refs/heads/release/SOTFECO.version",
 
-    "modName":"More Planetary Conditions",
+    "modName":"SOTF - Extra Combat Objectives",
 
     # The ID of the thread where updates to this mod can be found (optional).
     # This is used to launch directly to the forum thread from in the game.
@@ -32,6 +32,6 @@
     {
         "major":1,
         "minor":0,
-        "patch":0 # Can be a number, character or string (1, 2, a, b, "-RC2", etc)
+        "patch":1 # Can be a number, character or string (1, 2, a, b, "-RC2", etc)
     },
 }

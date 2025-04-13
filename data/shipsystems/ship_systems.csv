@@ -1,3 +1,3 @@
 name,id,flux/second,f/s (base rate),f/s (base cap),flux/use,f/u (base rate),f/u (base cap),cr/u,max uses,regen,charge up,active,down,cooldown,toggle,noDissipation,noHardDissipation,hardFlux,noFiring,noTurning,noStrafing,noAccel,noShield,noVent,isPhaseCloak,tags,icon
-ASB Uplink - HE,SOTFCEO_ASBuplink,,,,500,,,,,,,1,,90,,,,,,,,,,,,offensive,graphics/icons/hullsys/interdictor_array.png
-ASB Uplink - Kinetic,SOTFCEO_ASBuplink_kinetic,,,,500,,,,,,,1,,90,,,,,,,,,,,,offensive,graphics/icons/hullsys/interdictor_array.png
+ASB Uplink - HE,SOTFCEO_ASBuplink,,,,500,,,,,,,1,,59,,,,,,,,,,,,offensive,graphics/icons/hullsys/interdictor_array.png
+ASB Uplink - Kinetic,SOTFCEO_ASBuplink_kinetic,,,,500,,,,,,,1,,59,,,,,,,,,,,,offensive,graphics/icons/hullsys/interdictor_array.png

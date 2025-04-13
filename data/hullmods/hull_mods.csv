@@ -1,3 +1,3 @@
 name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sModDesc,sprite
-Bubble Shield,SOTFECO_bubbleShield,,,,,,,,TRUE,,0,0,0,0,SOTFECO.hullmods.BubbleShield,bubble shield lol,,,graphics/hullmods/illadvised.png
+Bubble Shield,SOTFECO_bubbleShield,,,,,,,,TRUE,,0,0,0,0,SOTFECO.hullmods.BubbleShield,"Deploys a massive softshield around it's host, capable of absorbing massive amounts of damage.",,,graphics/hullmods/omni_shield_emitter.png
 Force System,SOTFECO_forceSystem,,,,,,,,TRUE,TRUE,0,0,0,0,SOTFECO.hullmods.ForceUseSystem,adwda,,,graphics/hullmods/illadvised.png

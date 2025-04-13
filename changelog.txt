@@ -1,2 +1,17 @@
+1.0.1
+Fixes a crash with ASB targetting modules
+
+ASB platforms now only take a minute to reload
+ASB range increased substantially
+ASB has a new AI
+    Prioritizes big, slow ships
+    Ships engaged in combat more likely to be shot
+        If the ship is in trouble, FAR more likely to be shot
+    Phase ships mostly ignored
+    Ships without shields and no phase are targeted far more
+    If a ship has an eliminate order, it will almost always be picked
+
+Shield generator given more shield HP
+
 1.0.0
 Initial

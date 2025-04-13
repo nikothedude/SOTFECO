@@ -30,8 +30,8 @@
 		"effectClass":"data.scripts.combat.obj.SotfEmplacementEffect",
 	},
 	
-	"softCEO_objective_mote_sink":{
-		"name":"Siegeworks Uplink",
+	"softCEO_objective_cyberwarfare":{
+		"name":"Intrusion Node",
 		"icon":"graphics/warroom/sotf_objective_empl.png",
 		"sprite":"graphics/fx/empty.png",
 		"spriteScale":1,
