@@ -1,13 +1,13 @@
 {
-  "sotfCEO_objective_empl_shieldGen":{
-    "name":"Shield Generator",
-    "icon":"graphics/warroom/sotf_objective_empl.png",
-    "sprite":"graphics/ships/deployables/mini_navbeacon.png",
-    "spriteScale":1,
-    "captureTime":5,
-    "battleSizeFractionBonus":0.04,
-    "effectClass":"data.scripts.combat.obj.SotfEmplacementEffect",
-  },
+	"sotfCEO_objective_empl_shieldGen":{
+		"name":"Shield Generator",
+		"icon":"graphics/warroom/sotf_objective_empl.png",
+		"sprite":"graphics/ships/deployables/mini_navbeacon.png",
+		"spriteScale":1,
+		"captureTime":5,
+		"battleSizeFractionBonus":0.04,
+		"effectClass":"data.scripts.combat.obj.SotfEmplacementEffect",
+	},
   
   	# not a "real" reinforcer but close enough
 	"softCEO_objective_dweller_beacon":{
@@ -30,6 +30,56 @@
 		"effectClass":"data.scripts.combat.obj.SotfEmplacementEffect",
 	},
 	
+	"sotfCEO_objective_skirmisher_swarm":{
+		"name":"Skirmisher Swarm",
+		"icon":"graphics/warroom/sotf_ECO_threat_obj.png",
+		"sprite":"graphics/fx/empty.png",
+		"spriteScale":1,
+		"captureTime":60,
+		"battleSizeFractionBonus":0,
+		"effectClass":"SOTFECO.combatObj.SOTFCEO_threatSkirmisherSwarm",
+	},
+	
+	"sotfCEO_objective_assault_swarm":{
+		"name":"Assault Swarm",
+		"icon":"graphics/warroom/sotf_ECO_threat_obj.png",
+		"sprite":"graphics/fx/empty.png",
+		"spriteScale":1,
+		"captureTime":60,
+		"battleSizeFractionBonus":0,
+		"effectClass":"SOTFECO.combatObj.SOTFCEO_threatAssaultSwarm",
+	},
+	
+	"sotfCEO_objective_line_swarm":{
+		"name":"Line Swarm",
+		"icon":"graphics/warroom/sotf_ECO_threat_obj.png",
+		"sprite":"graphics/fx/empty.png",
+		"spriteScale":1,
+		"captureTime":60,
+		"battleSizeFractionBonus":0,
+		"effectClass":"SOTFECO.combatObj.SOTFCEO_threatLineSwarm",
+	},
+	
+	"sotfCEO_objective_hive_swarm":{
+		"name":"Hive Swarm",
+		"icon":"graphics/warroom/sotf_ECO_threat_obj.png",
+		"sprite":"graphics/fx/empty.png",
+		"spriteScale":1,
+		"captureTime":60,
+		"battleSizeFractionBonus":0,
+		"effectClass":"SOTFECO.combatObj.SOTFCEO_threatHiveSwarm",
+	},
+	
+	"sotfCEO_objective_fab_swarm":{
+		"name":"Fabricator Swarm",
+		"icon":"graphics/warroom/sotf_ECO_threat_obj.png",
+		"sprite":"graphics/fx/empty.png",
+		"spriteScale":1,
+		"captureTime":60,
+		"battleSizeFractionBonus":0,
+		"effectClass":"SOTFECO.combatObj.SOTFCEO_threatFabSwarm",
+	},
+	
 	"softCEO_objective_cyberwarfare":{
 		"name":"Intrusion Node",
 		"icon":"graphics/warroom/sotf_objective_empl.png",
@@ -37,6 +87,6 @@
 		"spriteScale":1,
 		"captureTime":5,
 		"battleSizeFractionBonus":0.04,
-		"effectClass":"data.scripts.combat.obj.SotfEmplacementEffect",
+		"effectClass":"SOTFECO.combatObj.SOTFCEO_dustkeeperEmplacement",
 	},
 }

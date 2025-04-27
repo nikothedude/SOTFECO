@@ -6,3 +6,7 @@ sotf_lidarnode_Mines_two,sotf_objective_empl_t2,0,0.8
 ,,,
 sotf_lidarnode_AntiShipBattery,sotfCEO_objective_ASB,0,1
 sotf_lidarnode_AntiShipBattery_kinetic,sotfCEO_objective_ASB,0,1
+,,,
+SOTFECO_dex_rem_turret_Lance,softCEO_objective_cyberwarfare,0,1
+SOTFECO_dex_rem_turret_Defense,softCEO_objective_cyberwarfare,0,1
+SOTFECO_dex_rem_turret_PD,softCEO_objective_cyberwarfare,0,1

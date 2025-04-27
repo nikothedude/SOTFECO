@@ -1,5 +1,7 @@
 package SOTFECO
 
+import SOTFECO.SOTFECO_settings.ENABLE_FAB_OBJECTIVE
+import SOTFECO.scripts.SOTFECO_flagScript
 import com.fs.starfarer.api.BaseModPlugin
 import com.fs.starfarer.api.Global
 import lunalib.lunaSettings.LunaSettings
@@ -28,4 +30,12 @@ class SOFTECO_modPlugin: BaseModPlugin() {
         }
     }
 
+    override fun onGameLoad(newGame: Boolean) {
+        super.onGameLoad(newGame)
+
+        val flagScript = SOTFECO_flagScript()
+        Global.getSector().addTransientScript(flagScript)
+        Global.getSector().addTransientListener(flagScript)
+        Global.getSector()?.memoryWithoutUpdate?.set("\$SOTFECO_enableFabObjective", ENABLE_FAB_OBJECTIVE)
+    }
 }

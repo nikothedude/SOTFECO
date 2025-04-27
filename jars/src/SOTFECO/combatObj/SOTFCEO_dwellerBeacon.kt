@@ -68,7 +68,7 @@ class SOTFCEO_dwellerBeacon: BaseBattleObjectiveEffect() {
 
         soundInterval.advance(amount)
         if (soundInterval.intervalElapsed()) {
-            val sound = Global.getSoundPlayer().playSound("abyssal_light_random_sound", 0.5f, 1f, objective.getLocation(), Misc.ZERO)
+            Global.getSoundPlayer().playSound("abyssal_light_random_sound", 0.5f, 1f, objective.location, Misc.ZERO)
         }
 
         if (objective.owner != 0 && objective.owner != 1) {
@@ -136,7 +136,7 @@ class SOTFCEO_dwellerBeacon: BaseBattleObjectiveEffect() {
 
             //isDone = true
             despawning = true
-            Global.getSoundPlayer().playSound("abyssal_light_expand_despawn_windup", 1f, 1f, objective.getLocation(), Misc.ZERO)
+            Global.getSoundPlayer().playSound("abyssal_light_expand_despawn_windup", 1f, 1f, objective.location, Misc.ZERO)
         } else {
             despawnInterval.advance(amount)
         }
@@ -182,12 +182,12 @@ class SOTFCEO_dwellerBeacon: BaseBattleObjectiveEffect() {
         var cw = 256f
         var ch = 256f
 
-        val loc: Vector2f = objective.getLocation()
+        val loc: Vector2f = objective.location
 
         val glowAlpha: Float = getGlowAlpha()
 
         coreGlow.color = Color(200,200,255,255)
-        glow.setColor(Color(200,200,255,255))
+        glow.color = Color(200,200,255,255)
 
         //w = params.size
         //h = params.size
@@ -201,8 +201,6 @@ class SOTFCEO_dwellerBeacon: BaseBattleObjectiveEffect() {
         h *= scale
         cw *= scale
         ch *= scale
-
-        val fringeScale = 1f
 
 
         //fringeScale = 1.5f;
@@ -269,7 +267,7 @@ class SOTFCEO_dwellerBeacon: BaseBattleObjectiveEffect() {
     override fun getLongDescription(): String {
         val min = Global.getSettings().getFloat("minFractionOfBattleSizeForSmallerSide")
         val total = Global.getSettings().battleSize
-        val maxPoints = Math.round(total * (1f - min))
+        Math.round(total * (1f - min))
 
         return String.format(
             """

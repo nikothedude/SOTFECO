@@ -1,3 +1,27 @@
+1.1.0
+
+New [ULTRA REDACTED] objective
+    Spawns in systems where [ULTRA REDACTED] spawns
+        Can also spawn in abyssal hyperspace if youve encountered [ULTRA REDACTED]
+        Extremely low chance to spawn in normal systems
+    Constructs a few [ULTRA REDACTED] ships
+        At least one overseer is guaranteed
+        Fabricators can be constructed, but it requires you to enable it in lunasettings
+
+    As with other one-time objectives that spawn ships, allowing the enemy to capture it has a chance to add
+    special items to the battle loot
+
+Dustkeeper emplacements now spawn
+    High chance in dustkeeper systems
+    Low chance in systems with duskkeeper proxy patrols
+
+    Will betray you if you meet duskkeeper betrayal conditions
+
+    Basically just a souped up remnant module with cyberwarfare
+
+Strange light now only spawns if you've encountered dweller
+    Higher chance in abyssal hyperspace
+
 1.0.1
 Fixes a crash with ASB targetting modules
 

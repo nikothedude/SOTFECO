@@ -3,7 +3,7 @@
 	"name":"SOTF - Extra Combat Objectives", # Displayed to the player
 	"author":"Niko, Inventor Raccoon (Author of SOTF)",
     "utility":"true",
-	"version":"1.0.1",
+	"version":"1.1.0",
 	"description":"Extra combat objectives for secrets of the frontier!",
     "gameVersion": "0.98a-RC5",
   	"jars":["jars/SOTFECO.jar"],
@@ -23,7 +23,7 @@
 		{
 			"id": "secretsofthefrontier",
 			"name": "Secrets of the Frontier",
-			"version": "0.14.5b"
+			"version": "0.15.0"
 
 		},
 	]
