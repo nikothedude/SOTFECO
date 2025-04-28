@@ -1,11 +1,10 @@
-package SOTFECO.combatObj
+package SOTFECO.combatObj.threat.constructor
 
+import SOTFECO.combatObj.threat.SOTFCEO_threatSwarm
 import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.campaign.CampaignFleetAPI
 import com.fs.starfarer.api.campaign.SpecialItemData
-import com.fs.starfarer.api.combat.BattleObjectiveAPI
 import com.fs.starfarer.api.combat.CollisionClass
-import com.fs.starfarer.api.combat.CombatEngineAPI
 import com.fs.starfarer.api.combat.CombatFleetManagerAPI
 import com.fs.starfarer.api.combat.ShipAPI.HullSize
 import com.fs.starfarer.api.combat.ShipVariantAPI

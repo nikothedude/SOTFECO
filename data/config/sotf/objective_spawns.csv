@@ -24,5 +24,7 @@ sotfCEO_line_swarm_system,sotfCEO_objective_line_swarm,,false,,true,SOTFECO_enco
 sotfCEO_hive_swarm_system,sotfCEO_objective_hive_swarm,,false,,true,SOTFECO_encounteredThreat,,120,,0.02
 sotfCEO_fab_swarm_system,sotfCEO_objective_fab_swarm,,false,,true,"SOTFECO_encounteredThreat, SOTFECO_enableFabObjective",,120,,0.02
 ,,,,,,,,,,
+sotfCEO_skirmisher_swarm_normal,sotfCEO_objective_attack_swarm,system_can_spawn_threat,false,,true,,,120,,0
+,,,,,,,,,,
 sotfCEO_intrusion_node_dustkeeper,softCEO_objective_cyberwarfare,sotf_theme_dustkeepers,false,,true,,,,,1
 sotfCEO_intrusion_node_system,softCEO_objective_cyberwarfare,,false,,true,SOTFECO_canSpawnIntrusionNode,,120,,0.2

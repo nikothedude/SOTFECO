@@ -1,11 +1,7 @@
-package SOTFECO.combatObj
+package SOTFECO.combatObj.threat.constructor
 
 import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin
-import com.fs.starfarer.api.combat.ShipAPI
-import com.fs.starfarer.api.impl.campaign.ids.Tags
-import com.fs.starfarer.api.impl.combat.threat.ConstructionSwarmSystemScript.SwarmConstructionData
-import com.fs.starfarer.api.impl.combat.threat.RoilingSwarmEffect
 import com.fs.starfarer.api.impl.combat.threat.ThreatCombatStrategyForBothSidesPlugin
 import com.fs.starfarer.api.impl.combat.threat.ThreatShipConstructionScript.SHIP_UNDER_CONSTRUCTION
 import com.fs.starfarer.api.input.InputEventAPI

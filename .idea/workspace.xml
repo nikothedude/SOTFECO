@@ -5,33 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f1eb7bc-6999-4c00-9b3a-f291104d7b7d" name="Changes" comment="forum">
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/ReflectionUtils.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_dustkeeperEmplacement.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_forceThreatShipAllyScript.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_threatAssaultSwarm.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_threatConstructionSwarm.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_threatFabSwarm.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_threatHiveSwarm.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_threatLineSwarm.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_threatSkirmisherSwarm.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_threatSwarm.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/hullmods/ForceWarmind.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/hullmods/PROXShield.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/scripts/SOTFECO_flagScript.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/secretsofthefrontier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/secretsofthefrontier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/threat/attack/SOTFCEO_threatAttackSwarm.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/threat/attack/SOTFCEO_threatAttackSwarmImpl.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SOTFECO.version" beforeDir="false" afterPath="$PROJECT_DIR$/SOTFECO.version" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changelog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/changelog.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/config/LunaSettings.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/config/LunaSettings.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/config/battle_objectives.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/config/battle_objectives.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/config/sotf/emplacement_variants.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/config/sotf/emplacement_variants.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/config/sotf/objective_spawns.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/config/sotf/objective_spawns.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/hullmods/hull_mods.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/hullmods/hull_mods.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jars/SOTFECO.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jars/SOTFECO.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/SOFTECO_modPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/SOFTECO_modPlugin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/SOTFECO_settings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/SOTFECO_settings.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_dwellerBeacon.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_dwellerBeacon.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mod_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/mod_info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_forceThreatShipAllyScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/threat/constructor/SOTFCEO_forceThreatShipAllyScript.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_threatAssaultSwarm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/threat/constructor/SOTFCEO_threatAssaultSwarm.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_threatConstructionSwarm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/threat/constructor/SOTFCEO_threatConstructionSwarm.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_threatFabSwarm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/threat/constructor/SOTFCEO_threatFabSwarm.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_threatHiveSwarm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/threat/constructor/SOTFCEO_threatHiveSwarm.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_threatLineSwarm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/threat/constructor/SOTFCEO_threatLineSwarm.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_threatSkirmisherSwarm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/threat/constructor/SOTFCEO_threatSkirmisherSwarm.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_threatSwarm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/threat/SOTFCEO_threatSwarm.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +39,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -94,7 +82,6 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2vT6i8vn8JHpbukRXalG4fpb54k" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -124,6 +111,8 @@
       <recent name="SOTFECO.combatObj" />
     </key>
     <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
+      <recent name="SOTFECO.combatObj.threat.constructor" />
+      <recent name="SOTFECO.combatObj.threat" />
       <recent name="SOTFECO.combatObj" />
     </key>
   </component>

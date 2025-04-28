@@ -1,6 +1,5 @@
-package SOTFECO.combatObj
+package SOTFECO.combatObj.threat.constructor
 
-import com.fs.starfarer.api.impl.combat.threat.ConstructionSwarmSystemScript
 import com.fs.starfarer.api.impl.combat.threat.ConstructionSwarmSystemScript.SwarmConstructableType
 import com.fs.starfarer.api.impl.combat.threat.ConstructionSwarmSystemScript.SwarmConstructableVariant
 
