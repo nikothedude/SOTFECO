@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f1eb7bc-6999-4c00-9b3a-f291104d7b7d" name="Changes" comment="forum">
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/threat/attack/SOTFCEO_threatAttackSwarm.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/threat/attack/SOTFCEO_threatAttackSwarmImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/config/battle_objectives.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/config/battle_objectives.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/config/sotf/objective_spawns.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/config/sotf/objective_spawns.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/SOTFECO.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jars/SOTFECO.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_forceThreatShipAllyScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/threat/constructor/SOTFCEO_forceThreatShipAllyScript.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_threatAssaultSwarm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/threat/constructor/SOTFCEO_threatAssaultSwarm.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_threatConstructionSwarm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/threat/constructor/SOTFCEO_threatConstructionSwarm.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_threatFabSwarm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/threat/constructor/SOTFCEO_threatFabSwarm.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_threatHiveSwarm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/threat/constructor/SOTFCEO_threatHiveSwarm.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_threatLineSwarm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/threat/constructor/SOTFCEO_threatLineSwarm.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_threatSkirmisherSwarm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/threat/constructor/SOTFCEO_threatSkirmisherSwarm.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_threatSwarm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/threat/SOTFCEO_threatSwarm.kt" afterDir="false" />
-    </list>
+    <list default="true" id="3f1eb7bc-6999-4c00-9b3a-f291104d7b7d" name="Changes" comment="ugh" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,11 +42,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1744393296" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="release" />
-                    <option name="lastUsedInstant" value="1744393288" />
+                    <option name="lastUsedInstant" value="1746369769" />
                   </RecentBranch>
                 </list>
               </option>
@@ -82,6 +63,7 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2vT6i8vn8JHpbukRXalG4fpb54k" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -149,7 +131,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744393283415</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ugh">
+      <option name="closed" value="true" />
+      <created>1746369907258</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746369907258</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -167,7 +157,8 @@
     <MESSAGE value="initial" />
     <MESSAGE value="two" />
     <MESSAGE value="forum" />
-    <option name="LAST_COMMIT_MESSAGE" value="forum" />
+    <MESSAGE value="ugh" />
+    <option name="LAST_COMMIT_MESSAGE" value="ugh" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
