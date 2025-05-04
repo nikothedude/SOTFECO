@@ -1,4 +1,4 @@
-package SOTFECO.combatObj
+package SOTFECO.combatObj.threat
 
 import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.combat.BattleObjectiveAPI
@@ -8,7 +8,6 @@ import com.fs.starfarer.api.combat.ShipAPI
 import com.fs.starfarer.api.impl.combat.BaseBattleObjectiveEffect
 import com.fs.starfarer.api.impl.combat.threat.RoilingSwarmEffect
 import com.fs.starfarer.api.impl.combat.threat.RoilingSwarmEffect.RoilingSwarmParams
-import com.fs.starfarer.api.util.IntervalUtil
 import java.awt.Color
 
 abstract class SOTFCEO_threatSwarm: BaseBattleObjectiveEffect() {
