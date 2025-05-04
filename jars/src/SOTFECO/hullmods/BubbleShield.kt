@@ -61,6 +61,9 @@ class BubbleShield: BaseHullMod() {
             shieldDrone.mutableStats.dynamic.getStat(Stats.SHIP_OBJECTIVE_CAP_RATE_MULT).modifyMult(id, 0f)
             shieldDrone.mutableStats.dynamic.getStat(Stats.SHIP_OBJECTIVE_CAP_RANGE_MOD).modifyMult(id, 0f)
 
+            shieldDrone.activeLayers.remove(CombatEngineLayers.FF_INDICATORS_LAYER)
+            shieldDrone.isRenderEngines = false
+
             ship.mutableStats.fluxCapacity.modifyFlat(id, SHIELD_STRENGTH)
 
             val shieldRadius = ship.collisionRadius * 25f

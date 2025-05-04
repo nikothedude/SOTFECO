@@ -1,0 +1,11 @@
+{
+    "displayName": "Custom",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "goalVariant": false,
+    "hullId": "SOTFECO_threatEmplacement",
+    "hullMods": [],
+    "quality": 0.0,
+    "variantId": "SOTFECO_threatEmplacement_custom",
+    "weaponGroups": []
+}

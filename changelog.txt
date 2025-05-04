@@ -22,6 +22,8 @@ Dustkeeper emplacements now spawn
 Strange light now only spawns if you've encountered dweller
     Higher chance in abyssal hyperspace
 
+Shield generator no longer renders the FF indicator of the shield drone, nor its engines
+
 1.0.1
 Fixes a crash with ASB targetting modules
 
