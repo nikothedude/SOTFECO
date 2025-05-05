@@ -16,7 +16,7 @@ import com.fs.starfarer.api.util.Misc
 class SOTFCEOEnergyInfusionSystemScript: EnergyLashSystemScript() {
 
     companion object {
-        const val SPEED_BONUS_PERCENT: Float = 30f
+        const val SPEED_BONUS_PERCENT: Float = 50f
         const val FLUX_DISSIPATION_MULT: Float = 1.5f
         const val DAMAGE_TAKEN_PERCENT: Float = -10f
 
@@ -186,10 +186,10 @@ class SOTFCEOEnergyInfusionSystemScript: EnergyLashSystemScript() {
                 level
             )
 
-            handleNotif()
+            handleNotif(level)
         }
 
-        private fun handleNotif() {
+        private fun handleNotif(level: Float) {
             if (target != Global.getCombatEngine().playerShip) return
 
             val engine = Global.getCombatEngine()
@@ -204,14 +204,14 @@ class SOTFCEOEnergyInfusionSystemScript: EnergyLashSystemScript() {
                 INFOKEY_2,
                 "graphics/icons/hullsys/incursion_mode.png",
                 "Energy Infusion",
-                "${FLUX_DISSIPATION_MULT.roundNumTo(2).trimHangingZero()}x flux dissipation",
+                "${(FLUX_DISSIPATION_MULT * level).roundNumTo(2).trimHangingZero()}x flux dissipation",
                 false
             )
             engine.maintainStatusForPlayerShip(
                 INFOKEY_3,
                 "graphics/icons/hullsys/incursion_mode.png",
                 "Energy Infusion",
-                "${DAMAGE_TAKEN_PERCENT}% less damage taken",
+                "${(-DAMAGE_TAKEN_PERCENT * level).trimHangingZero()}% less damage taken",
                 false
             )
         }

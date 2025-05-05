@@ -99,4 +99,14 @@
 		"battleSizeFractionBonus":0.04,
 		"effectClass":"SOTFECO.combatObj.SOTFCEO_dustkeeperEmplacement",
 	},
+	
+	"softCEO_objective_threat_empl":{
+		"name":"Bulwark Swarm",
+		"icon":"graphics/warroom/sotf_objective_empl.png",
+		"sprite":"graphics/fx/empty.png",
+		"spriteScale":1,
+		"captureTime":15, # its a THREATening objective (get it?)
+		"battleSizeFractionBonus":0.04,
+		"effectClass":"SOTFECO.combatObj.threat.SOTFECO_threatEmplacementEffect",
+	},
 }

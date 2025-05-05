@@ -8,12 +8,12 @@ softCEO_abyss_dweller_beacon,softCEO_objective_dweller_beacon,,true,,true,"SOTF_
 sotfCEO_systems_objective_ASB,sotfCEO_objective_ASB,,,false,false,,,150,,0.15
 sotfCEO_ruins_objective_ASB,sotfCEO_objective_ASB,theme_ruins,,false,false,,,120,,1.1
 ,,,,,,,,,,
-sotfCEO_skirmisher_swarm_normal,sotfCEO_objective_skirmisher_swarm,system_can_spawn_threat,false,,true,,,120,,0.24
-sotfCEO_assault_swarm_normal,sotfCEO_objective_assault_swarm,system_can_spawn_threat,false,,true,,,120,,0.1
-sotfCEO_line_swarm_normal,sotfCEO_objective_line_swarm,system_can_spawn_threat,false,,true,,,120,,0.1
-sotfCEO_hive_swarm_normal,sotfCEO_objective_hive_swarm,system_can_spawn_threat,false,,true,,,120,,0.1
-sotfCEO_fab_swarm_normal,sotfCEO_objective_fab_swarm,system_can_spawn_threat,false,,true,SOTFECO_enableFabObjective,,120,,0.1
-sotfCEO_skirmisher_swarm_abyss,sotfCEO_objective_skirmisher_swarm,,true,,true,"SOTFECO_encounteredThreat, SOTFECO_playerInAbyss",,120,,0.1
+sotfCEO_skirmisher_swarm_normal,sotfCEO_objective_skirmisher_swarm,system_can_spawn_threat,false,,true,,,120,,0.5
+sotfCEO_assault_swarm_normal,sotfCEO_objective_assault_swarm,system_can_spawn_threat,false,,true,,,120,,0.2
+sotfCEO_line_swarm_normal,sotfCEO_objective_line_swarm,system_can_spawn_threat,false,,true,,,120,,0.2
+sotfCEO_hive_swarm_normal,sotfCEO_objective_hive_swarm,system_can_spawn_threat,false,,true,,,120,,0.2
+sotfCEO_fab_swarm_normal,sotfCEO_objective_fab_swarm,system_can_spawn_threat,false,,true,SOTFECO_enableFabObjective,,120,,0.2
+sotfCEO_skirmisher_swarm_abyss,sotfCEO_objective_skirmisher_swarm,,true,,true,"SOTFECO_encounteredThreat, SOTFECO_playerInAbyss",,120,,0.2
 sotfCEO_assault_swarm_abyss,sotfCEO_objective_assault_swarm,,true,,true,"SOTFECO_encounteredThreat, SOTFECO_playerInAbyss",,120,,0.05
 sotfCEO_line_swarm_abyss,sotfCEO_objective_line_swarm,,true,,true,"SOTFECO_encounteredThreat, SOTFECO_playerInAbyss",,120,,0.05
 sotfCEO_hive_swarm_abyss,sotfCEO_objective_hive_swarm,,true,,true,"SOTFECO_encounteredThreat, SOTFECO_playerInAbyss",,120,,0.05
@@ -24,7 +24,9 @@ sotfCEO_line_swarm_system,sotfCEO_objective_line_swarm,,false,,true,SOTFECO_enco
 sotfCEO_hive_swarm_system,sotfCEO_objective_hive_swarm,,false,,true,SOTFECO_encounteredThreat,,120,,0.02
 sotfCEO_fab_swarm_system,sotfCEO_objective_fab_swarm,,false,,true,"SOTFECO_encounteredThreat, SOTFECO_enableFabObjective",,120,,0.02
 ,,,,,,,,,,
-sotfCEO_skirmisher_swarm_normal,sotfCEO_objective_attack_swarm,system_can_spawn_threat,false,,true,,,120,,0
+sotfCEO_attack_swarm_normal,sotfCEO_objective_attack_swarm,system_can_spawn_threat,false,,true,,,120,,0
+,,,,,,,,,,
+softCEO_threat_empl_normal,softCEO_objective_threat_empl,system_can_spawn_threat,false,,true,,,140,,0.5
 ,,,,,,,,,,
 sotfCEO_intrusion_node_dustkeeper,softCEO_objective_cyberwarfare,sotf_theme_dustkeepers,false,,true,,,,,1
 sotfCEO_intrusion_node_system,softCEO_objective_cyberwarfare,,false,,true,SOTFECO_canSpawnIntrusionNode,,120,,0.2

@@ -1,5 +1,18 @@
 id,type,text1,text2,text3,text4,notes
 SOTFECO_shieldNode,SHIP,"A modified lidar node, harboring an extremely powerful shield generator capable of protecting a small squad of ships.",,,,
+SOTFECO_threatEmplacement,SHIP,"Closest match found to archive entry for ""Roristead""-class sensor emplacement, 41.29% confidence. Querying database... ""An auxillary design created under cumbersome time restraints, the Orion Shipyards Roristead was deployed wherever frontier patrols were lacking. Using a device similar to the 'Fulgurite' frontier support cruiser, this installation was capable o- DOMAIN INFOSEC VIOLATION THRESHOLD WARNING
+// datastream resetting...
+
+-space rendered impassable to conventional travel. A battlegroup was planned and dispatched, returning with heavy losses from 'spontaniously forming hostile entities'- FATAL ACCESS ERROR //
+
+This TriPad is not authorized to provide additional description for the requested product ID. Please upgrade your data permission level in compliance with Domain Information Security Standards.",Unidentified Vessel,"UNKNOWN ENTRY
+
+Please register your Tri-Tachyon datapad to receive the latest news and updates.",,
 ,,,,,,
+SOTFECO_energyInfusion,SHIP_SYSTEM,"Fires a voltaic arc at the targeted ship, powering and activating certain ship systems. If no system is present, the energy is absorbed by operation-critical systems, improving general ship performance.
+
+When targeting an enemy ship, deals EMP damage. Can hit, and briefly overloads phased targets.",Special,"Activates certain ship systems on targeted friendly ships. If no compatible system exists, improves general ship performance instead. When targeting an enemy, deals EMP damage. Can hit, and briefly overloads phased targets.",,"Deals {{1500 EMP}} damage per arc to enemy ships. The system can hit targets within approximately {{1500}} su of the ship.
+
+If a friendly ship has a {{lash-activated}} ship system, it will be activated. Otherwise, the ship will enjoy {{improved performance}} for a brief period."
 SOTFCEO_ASBuplink,SHIP_SYSTEM,"Desigates the target to be struck by a distant ASB platform. After a short delay, the ASB fires a projectile capable of 4000 HE damage with extreme speed.",Offensive,"Desigates the target to be struck by a distant ASB platform. After a short delay, the ASB fires a projectile capable of 4000 HE damage with extreme speed.",4000 HE,
 SOTFCEO_ASBuplink_kinetic,SHIP_SYSTEM,"Desigates the target to be struck by a distant ASB platform. After a short delay, the ASB fires a projectile capable of 4000 kinetic damage with extreme speed.",Offensive,"Desigates the target to be struck by a distant ASB platform. After a short delay, the ASB fires a projectile capable of 4000 kinetic damage with extreme speed.",4000 kinetic,

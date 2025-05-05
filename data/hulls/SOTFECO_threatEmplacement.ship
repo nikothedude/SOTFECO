@@ -20,12 +20,13 @@
 		"automated",
         "threat_hullmod",
         "fragment_swarm",
-        "fragment_coordinator",
+        #"fragment_coordinator",
         "axialrotation",
         "supercomputer",
         "sotf_noventing",
         "turretgyros",
-        "missile_reload"
+        "missile_reload",
+		"SOTFECO_systemRange"
     ],
     "builtInWings": [],
     "weaponSlots": [
