@@ -5,9 +5,12 @@ import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.util.Misc
 import data.scripts.combat.obj.SotfEmplacementEffect
 import SOTFECO.ReflectionUtils
+import com.fs.starfarer.api.combat.CombatAssignmentType
 import com.fs.starfarer.combat.entities.BattleObjective
 
 class SOTFCEO_dustkeeperEmplacement: SotfEmplacementEffect() {
+
+    var betrayed = false
 
     companion object {
         fun announceBetrayal() {
@@ -29,7 +32,7 @@ class SOTFCEO_dustkeeperEmplacement: SotfEmplacementEffect() {
         val engine = Global.getCombatEngine()
         if (engine.isPaused) return
 
-        if (SOTFECO_flagScript.dustKeepersHostile()) {
+        if (!betrayed && SOTFECO_flagScript.dustKeepersHostile()) {
             if (objective.owner != 1) {
                 announceBetrayal()
 
@@ -38,7 +41,20 @@ class SOTFCEO_dustkeeperEmplacement: SotfEmplacementEffect() {
                 ReflectionUtils.set("capProgress", battleObjective, 1001, BattleObjective::class.java)
                 ReflectionUtils.set("capTime", battleObjective, 1000, BattleObjective::class.java)
                 ReflectionUtils.set("capOwner", battleObjective, 1, BattleObjective::class.java)
+
+                betrayed = true
             }
+        }
+
+        if (betrayed) {
+            val allyManager = engine.getFleetManager(0).getTaskManager(true)
+            for (assignment in allyManager.allAssignments.toMutableSet()) {
+                if (assignment.target != objective) continue
+                if (assignment.type == CombatAssignmentType.CAPTURE || assignment.type == CombatAssignmentType.ASSAULT) {
+                    allyManager.removeAssignment(assignment)
+                }
+            }
+
         }
     }
 }

@@ -72,7 +72,13 @@ abstract class SOTFCEO_threatConstructionSwarm: SOTFCEO_threatSwarm() {
 
             }
         }
+
+        tryAddingCombatStrategy()
         //Global.getCombatEngine().addPlugin(SOTFCEO_forceThreatShipAllyScript())
+    }
+
+    private fun tryAddingCombatStrategy() {
+        // todo
     }
 
     private fun createConstructionSwarms() {

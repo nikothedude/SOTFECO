@@ -36,10 +36,5 @@ class SOFTECO_modPlugin: BaseModPlugin() {
         val flagScript = SOTFECO_flagScript()
         Global.getSector().addTransientScript(flagScript)
         Global.getSector().addTransientListener(flagScript)
-        if (ENABLE_FAB_OBJECTIVE) {
-            Global.getSector()?.memoryWithoutUpdate?.set("\$SOTFECO_enableFabObjective", ENABLE_FAB_OBJECTIVE)
-        } else {
-            Global.getSector()?.memoryWithoutUpdate?.unset("\$SOTFECO_enableFabObjective")
-        }
     }
 }

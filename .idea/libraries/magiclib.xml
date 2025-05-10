@@ -3,11 +3,15 @@
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../MagicLib-1.5.6/jars/MagicLib.jar!/" />
       <root url="jar://$PROJECT_DIR$/../MagicLib-1.5.6/jars/MagicLib-Kotlin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../MagicLib-1.5.4/jars/MagicLib-Kotlin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../MagicLib-1.5.4/jars/MagicLib.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="file://$PROJECT_DIR$/../MagicLib-1.5.6/src" />
       <root url="jar://$PROJECT_DIR$/../MagicLib-1.5.6/jars/MagicLib.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../MagicLib-1.5.4/jars/MagicLib.jar!/" />
+      <root url="file://$PROJECT_DIR$/../MagicLib-1.5.4/src" />
     </SOURCES>
   </library>
 </component>

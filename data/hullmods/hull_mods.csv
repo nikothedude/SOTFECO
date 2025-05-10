@@ -4,3 +4,4 @@ Force System,SOTFECO_forceSystem,,,,,,,,TRUE,TRUE,0,0,0,0,SOTFECO.hullmods.Force
 Force Warmind,SOTFECO_forceWarmind,,,,,,,,TRUE,TRUE,0,0,0,0,SOTFECO.hullmods.ForceWarmind,aaa,,,graphics/hullmods/illadvised.png
 Prox Shield,SOTFECO_proxShield,,,,,,,,TRUE,TRUE,0,0,0,0,SOTFECO.hullmods.PROXShield,whatever lol,,,graphics/hullmods/omni_shield_emitter.png
 Bonus System Range,SOTFECO_systemRange,,,,,,,,TRUE,TRUE,0,0,0,0,SOTFECO.hullmods.SystemRange,aaa,,,graphics/hullmods/illadvised.png
+No DP Usage,SOTFECO_noDP,,,,,,,,TRUE,TRUE,0,0,0,0,SOTFECO.hullmods.NoDP,aaa,,,graphics/hullmods/illadvised.png

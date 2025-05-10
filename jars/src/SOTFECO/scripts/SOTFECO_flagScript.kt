@@ -1,5 +1,7 @@
 package SOTFECO.scripts
 
+import SOTFECO.SOTFECO_settings
+import SOTFECO.SOTFECO_settings.IGNORE_PREVIOUS_ENCOUNTER_REQS
 import com.fs.starfarer.api.EveryFrameScript
 import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.campaign.*
@@ -19,20 +21,11 @@ class SOTFECO_flagScript: EveryFrameScript, CampaignEventListener {
             if (!playerFleet.isInHyperspace) return false
 
             val abyss = Misc.getHyperspaceTerrainPlugin()?.abyssPlugin ?: return false
-            if (abyss.isInAbyss(playerFleet)) {
-                return true
-            } else {
-                return false
-            }
+            return abyss.isInAbyss(playerFleet)
         }
 
         fun checkIntrusionNodeGenericFlag() {
-            val canSpawn = canSpawnGenericIntrusionNode()
-            if (canSpawn) {
-                Global.getSector().memoryWithoutUpdate["\$SOTFECO_canSpawnIntrusionNode"] = true
-            } else {
-                Global.getSector().memoryWithoutUpdate.unset("\$SOTFECO_canSpawnIntrusionNode")
-            }
+            SOTFECO_settings.toggleFlag("\$SOTFECO_canSpawnIntrusionNode", canSpawnGenericIntrusionNode())
         }
 
         fun canSpawnGenericIntrusionNode(): Boolean {
@@ -41,7 +34,7 @@ class SOTFECO_flagScript: EveryFrameScript, CampaignEventListener {
             val playerLocation = playerFleet.containingLocation ?: return false
             if (dustKeepersHostile()) return false
             for (market in Global.getSector().economy.getMarkets(playerLocation)) {
-                if (market.hasCondition(SotfIDs.CONDITION_PROXYPATROLS)) return true
+                if (market.hasCondition(SotfIDs.CONDITION_PROXYPATROLS) && market.getCondition(SotfIDs.CONDITION_PROXYPATROLS).plugin.showIcon()) return true
             }
 
             return false
@@ -71,25 +64,12 @@ class SOTFECO_flagScript: EveryFrameScript, CampaignEventListener {
     }
 
     private fun updateMonsterFlag() {
-        if (Global.getSector().playerMemoryWithoutUpdate.getBoolean("\$encounteredDweller")) {
-            Global.getSector().memoryWithoutUpdate["\$SOTF_ECOencounteredDweller"] = true
-        } else {
-            Global.getSector().memoryWithoutUpdate.unset("\$SOTF_ECOencounteredDweller")
-        }
-        if (Global.getSector().playerMemoryWithoutUpdate.getBoolean("\$encounteredThreat")) {
-            Global.getSector().memoryWithoutUpdate["\$SOTF_ECOencounteredThreat"] = true
-        } else {
-            Global.getSector().memoryWithoutUpdate.unset("\$SOTF_ECOencounteredThreat")
-        }
+        SOTFECO_settings.toggleFlag("\$SOTF_ECOencounteredDweller", IGNORE_PREVIOUS_ENCOUNTER_REQS || Global.getSector().playerMemoryWithoutUpdate.getBoolean("\$encounteredDweller"))
+        SOTFECO_settings.toggleFlag("\$SOTF_ECOencounteredThreat", IGNORE_PREVIOUS_ENCOUNTER_REQS || Global.getSector().playerMemoryWithoutUpdate.getBoolean("\$encounteredThreat"))
     }
 
     private fun updateAbyssFlag() {
-        val inAbyss = playerInAbyss()
-        if (inAbyss) {
-            Global.getSector().memoryWithoutUpdate["\$SOTFECO_playerInAbyss"] = true
-        } else {
-            Global.getSector().memoryWithoutUpdate.unset("\$SOTFECO_playerInAbyss")
-        }
+        SOTFECO_settings.toggleFlag("\$SOTFECO_playerInAbyss", playerInAbyss())
     }
 
     override fun reportPlayerOpenedMarket(market: MarketAPI?) {

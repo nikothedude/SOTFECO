@@ -11,34 +11,29 @@ object SOTFECO_settings {
     //var ABYSSAL_LIGHT_OBJ_ENABLED = true
     var DO_PLAYER_ASB_WARNING = true
     var ENABLE_FAB_OBJECTIVE = false
+    var IGNORE_PREVIOUS_ENCOUNTER_REQS = false
 
     fun loadSettings() {
         DO_PLAYER_ASB_WARNING = LunaSettings.getBoolean(modId, "SOTFECO_doPlayerASBWarning")!!
         ENABLE_FAB_OBJECTIVE = LunaSettings.getBoolean(modId, "SOTFECO_enableFabObjective")!!
-        if (ENABLE_FAB_OBJECTIVE) {
-            Global.getSector()?.memoryWithoutUpdate?.set("\$SOTFECO_enableFabObjective", true)
-        } else {
-            Global.getSector()?.memoryWithoutUpdate?.unset("\$SOTFECO_enableFabObjective")
+        IGNORE_PREVIOUS_ENCOUNTER_REQS = LunaSettings.getBoolean(modId, "SOTFECO_ignorePreviousEncounterReqs")!!
+        toggleFlag("\$SOTFECO_enableFabObjective", ENABLE_FAB_OBJECTIVE)
+    }
+
+    fun toggleFlag(flag: String, value: Boolean) {
+        val memory = Global.getSector()?.memoryWithoutUpdate ?: return
+
+        var flag = flag
+        val first = flag.firstOrNull() ?: return
+        if (first != '$') {
+            flag = "$$flag"
         }
-        /*ABYSSAL_LIGHT_OBJ_ENABLED = LunaSettings.getBoolean(modId,"SOTFECO_enableAbyssalLightObjs")!!
 
-        if (!ABYSSAL_LIGHT_OBJ_ENABLED) {
-            var targetIndex = 0
-            var foundTarget = false
-            var i = -1
-            for (entry in SotfModPlugin.OBJECTIVE_DATA) {
-                i++
-                if (entry["id"] == "softCEO_hyperspace_dweller_beacon") {
-                    foundTarget = true
-                    targetIndex = i
-                    break
-                }
-            }
-
-            if (foundTarget) {
-                SotfModPlugin.OBJECTIVE_DATA.remove(targetIndex)
-            }
-        }*/
+        if (value) {
+            memory.set(flag, true)
+        } else {
+            memory.unset(flag)
+        }
     }
 
 }

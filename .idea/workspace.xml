@@ -5,24 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f1eb7bc-6999-4c00-9b3a-f291104d7b7d" name="Changes" comment="ugh">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/magiclib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/threat/SOTFECO_threatEmplacementEffect.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/hullmods/SystemRange.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/secretsofthefrontier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/secretsofthefrontier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/augments/ASBPlatforms.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/hullmods/NoDP.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/magiclib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/magiclib.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SOTF - Extra Combat Objectives.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SOTF - Extra Combat Objectives.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/changelog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/changelog.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/config/battle_objectives.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/config/battle_objectives.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/config/sotf/emplacement_variants.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/config/sotf/emplacement_variants.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/config/sotf/objective_spawns.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/config/sotf/objective_spawns.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/config/LunaSettings.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/config/LunaSettings.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/hullmods/hull_mods.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/hullmods/hull_mods.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/hulls/SOTFECO_threatEmplacement.ship" beforeDir="false" afterPath="$PROJECT_DIR$/data/hulls/SOTFECO_threatEmplacement.ship" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/hulls/ship_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/hulls/ship_data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/strings/descriptions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/strings/descriptions.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/variants/SOTFECO_threatEmplacement_Type026.variant" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/jars/SOTFECO.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jars/SOTFECO.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/SOFTECO_modPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/SOFTECO_modPlugin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/SOTFCEOEnergyInfusionSystemScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/SOTFCEOEnergyInfusionSystemScript.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/SOTFECO_settings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/SOTFECO_settings.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_dustkeeperEmplacement.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_dustkeeperEmplacement.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/threat/constructor/SOTFCEO_threatConstructionSwarm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/threat/constructor/SOTFCEO_threatConstructionSwarm.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/scripts/SOTFECO_flagScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/scripts/SOTFECO_flagScript.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mod_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/mod_info.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +29,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Kotlin Object" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -81,6 +79,7 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2vT6i8vn8JHpbukRXalG4fpb54k" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -94,7 +93,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Starsector/mods/SOTF - Extra Combat Objectives",
+    "last_opened_file_path": "C:/Starsector/mods/Station-Augments/src",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15332031",
     "project.structure.side.proportion": "0.20689656",
@@ -189,11 +188,6 @@
           <url>file://$PROJECT_DIR$/../Secrets of the Frontier 0.14.5b/jars/src/data/scripts/plugins/SotfBattleCreationPluginImpl.java</url>
           <line>238</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$PROJECT_DIR$/../../starsector-core/starfarer.api.zip!/com/fs/starfarer/api/impl/combat/threat/ThreatCombatStrategyAI.java</url>
-          <line>76</line>
-          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

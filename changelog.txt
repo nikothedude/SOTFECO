@@ -28,6 +28,10 @@ Strange light now only spawns if you've encountered dweller
 
 Shield generator no longer renders the FF indicator of the shield drone, nor its engines
 
+Added station augment integration
+    ASB Coordinator
+        Spawns a number of ASB uplinks behind the station, depending on the ground defenses of the market
+
 1.0.1
 Fixes a crash with ASB targetting modules
 
