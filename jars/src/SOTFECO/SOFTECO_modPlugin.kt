@@ -11,11 +11,13 @@ class SOFTECO_modPlugin: BaseModPlugin() {
 
     companion object {
         var lunaLibEnabled = false
+        var SA_enabled = false
         const val modId = "niko_SOTFMoreCombatObjectives"
     }
 
     override fun onApplicationLoad() {
         lunaLibEnabled = Global.getSettings().modManager.isModEnabled("lunalib")
+        SA_enabled = Global.getSettings().modManager.isModEnabled("niko_stationAugments")
 
         if (lunaLibEnabled) {
             LunaSettings.addSettingsListener(settingsChangedListener())
@@ -36,5 +38,11 @@ class SOFTECO_modPlugin: BaseModPlugin() {
         val flagScript = SOTFECO_flagScript()
         Global.getSector().addTransientScript(flagScript)
         Global.getSector().addTransientListener(flagScript)
+    }
+
+    override fun onAboutToLinkCodexEntries() {
+        super.onAboutToLinkCodexEntries()
+
+        CodexData.linkCodexEntries()
     }
 }

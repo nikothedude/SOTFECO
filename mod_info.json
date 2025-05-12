@@ -1,8 +1,8 @@
 {
     "id":"niko_SOTFMoreCombatObjectives", # For the convenience of troubleshooters, include your name and the mod name, not just an acronym.
 	"name":"SOTF - Extra Combat Objectives", # Displayed to the player
-	"author":"Niko, Inventor Raccoon (Author of SOTF). Khepht (Spriter)",
-    "utility":"true",
+	"author":"Niko, Inventor Raccoon (Author of SOTF), Khepht (Spriter)",
+    "utility":"false",
 	"version":"1.1.0",
 	"description":"Extra combat objectives for secrets of the frontier, along a few other goodies.",
     "gameVersion": "0.98a-RC5",

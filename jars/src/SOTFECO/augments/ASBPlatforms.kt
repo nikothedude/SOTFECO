@@ -3,21 +3,22 @@ package SOTFECO.augments
 import SOTFECO.ReflectionUtils
 import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.campaign.econ.Industry
+import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin
 import com.fs.starfarer.api.combat.BattleObjectiveAPI
 import com.fs.starfarer.api.combat.ShipAPI
+import com.fs.starfarer.api.impl.campaign.BattleAutoresolverPluginImpl
+import com.fs.starfarer.api.impl.campaign.ids.Commodities
 import com.fs.starfarer.api.impl.campaign.ids.Industries
 import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin
+import com.fs.starfarer.api.input.InputEventAPI
+import com.fs.starfarer.api.ui.Alignment
 import com.fs.starfarer.api.ui.TooltipMakerAPI
 import com.fs.starfarer.api.util.Misc
 import com.fs.starfarer.combat.CombatEngine
 import com.fs.starfarer.combat.entities.BattleObjective
-import niko_SA.SA_settings
 import niko_SA.augments.core.stationAttachment
-import niko_SA.augments.shieldShunt.Companion.ARMOR_MULT
-import niko_SA.augments.shieldShunt.Companion.HULL_MULT
-import niko_SA.stringUtils.toPercent
 import org.lwjgl.util.vector.Vector2f
-import kotlin.math.absoluteValue
+import kotlin.math.ceil
 
 class ASBPlatforms: stationAttachment() {
 
@@ -25,21 +26,24 @@ class ASBPlatforms: stationAttachment() {
         const val OBJ_ID = "sotfCEO_objective_ASB"
 
         const val EXTRA_Y_DISTANCE = 2500f
+
+        const val AUTORESOLVE_ASB_NUM_ANCHOR = 2.3f
     }
 
     override fun applyInCombat(station: ShipAPI) {
         val toDeploy = getNumASBSToPlace()
-        deployASBs(toDeploy, station)
+        val asbs = deployASBs(toDeploy.first, station)
+        Global.getCombatEngine().addPlugin(DelayedASBPlatformAdd(asbs, station))
     }
 
-    private fun deployASBs(num: Int, station: ShipAPI) {
+    private fun deployASBs(num: Int, station: ShipAPI): MutableSet<BattleObjective> {
         val owner = station.owner
         val playerside = owner == 0
         val engine = Global.getCombatEngine() as CombatEngine
         val objectives: MutableSet<BattleObjective> = HashSet()
         var yDist = EXTRA_Y_DISTANCE + station.collisionRadius
         if (playerside) yDist = yDist * -1
-        if (num <= 0) return
+        if (num <= 0) return objectives
         if (num == 1) {
             val objective = BattleObjective(
                 OBJ_ID,
@@ -51,7 +55,7 @@ class ASBPlatforms: stationAttachment() {
         } else {
             val initialX = (engine.mapWidth * -0.12f)
             var currX = initialX
-            val xOffset = (initialX) / (objectives.size - 1)
+            val xOffset = (initialX * -2) / (num - 1)
 
             var objsLeft = num
             while (objsLeft-- > 0) {
@@ -66,22 +70,7 @@ class ASBPlatforms: stationAttachment() {
             }
         }
 
-        finalizeDeployment(objectives, station, owner, playerside)
-    }
-
-    private fun finalizeDeployment(
-        objectives: MutableSet<BattleObjective>,
-        station: ShipAPI,
-        owner: Int,
-        playerside: Boolean
-    ) {
-        for (objective in objectives) {
-            val existingTime = ReflectionUtils.get("capTime", objective, BattleObjective::class.java) as Float
-            //val newTime = existingTime * 2f
-            //ReflectionUtils.set("capTime", objective, newTime, BattleObjective::class.java)
-            ReflectionUtils.set("capProgress", objective, existingTime + 1, BattleObjective::class.java)
-            ReflectionUtils.set("capOwner", objective, owner, BattleObjective::class.java)
-        }
+        return objectives
     }
 
     override fun getUnavailableReason(): String? {
@@ -109,15 +98,32 @@ class ASBPlatforms: stationAttachment() {
         return market!!.getIndustry(Industries.HEAVYBATTERIES) ?: market!!.getIndustry(Industries.GROUNDDEFENSES)
     }
 
-    fun getNumASBSToPlace(): Int {
-        val ind = getBatteries() ?: return 0
+    fun getNumASBSToPlace(): Pair<Int, Int> {
+        val ind = getBatteries() ?: return Pair(0, 0)
         var base = 0
 
         if (ind.spec.hasTag(Industries.TAG_GROUNDDEFENSES)) base += 2
         if (ind.id == Industries.HEAVYBATTERIES) base += 1
         if (ind.isImproved) base += 1
+        var adjustedBase = base.toFloat()
+        adjustedBase *= getPercentASBSReductionDueToDeficits()
+        val finalBase = ceil(adjustedBase).toInt()
 
-        return base
+        return Pair(finalBase, (base - finalBase))
+    }
+
+    fun getPercentASBSReductionDueToDeficits(): Float {
+        val batteries = getBatteries() ?: return 1f
+        val maxDeficit = batteries.getMaxDeficit(
+            Commodities.SUPPLIES,
+            Commodities.HAND_WEAPONS
+        )
+        if (maxDeficit.one == null) return 1f
+        val maxDemand = batteries.getDemand(maxDeficit.one)
+        val beingSupplied = maxDemand.quantity.modified - maxDeficit.two
+        val deficitRatio = (beingSupplied / maxDemand.quantity.modified)
+
+        return deficitRatio
     }
 
     override fun getBlueprintValue(): Int {
@@ -141,11 +147,9 @@ class ASBPlatforms: stationAttachment() {
             "owned",
             "can be captured"
         )
-
-
         tooltip.addPara(
             "The number of uplinks is dependent on the effectiveness of the market's %s. %s provide more, as does an %s installation.",
-            10f,
+            5f,
             Misc.getHighlightColor(),
             "ground defenses", "Heavy batteries", "improved"
         ).setHighlightColors(
@@ -154,6 +158,7 @@ class ASBPlatforms: stationAttachment() {
             Misc.getStoryOptionColor()
         )
         if (market != null && applied) {
+            tooltip.addSectionHeading("Effectiveness", Alignment.MID, 5f)
             tooltip.setBulletedListMode(BaseIntelPlugin.BULLET)
             val batteries = getBatteries()
             if (batteries == null) {
@@ -161,11 +166,82 @@ class ASBPlatforms: stationAttachment() {
             } else {
                 tooltip.addPara("Currently coordinating %s.", 5f, Misc.getPositiveHighlightColor(), batteries.currentName)
                 val numASBs = getNumASBSToPlace()
-                tooltip.addPara("Managing %s ASB uplinks", 5f, Misc.getPositiveHighlightColor(), numASBs.toString())
+                val reduction = numASBs.second
+                tooltip.addPara("Managing %s ASB uplinks", 5f, Misc.getPositiveHighlightColor(), numASBs.first.toString())
+                if (reduction > 0) {
+                    tooltip.addPara(
+                        "Reduced by %s due to %s",
+                        5f,
+                        Misc.getNegativeHighlightColor(),
+                        "$reduction",
+                        "supply deficits"
+                    )
+                }
             }
             tooltip.setBulletedListMode(null)
         }
 
+        tooltip.addSpacer(5f)
         tooltip.addPara("Cannot be removed if ground defenses are currently disrupted.", 5f).color = Misc.getGrayColor()
+        tooltip.addPara(
+            "Somewhat underpowered for it's AP cost if using only ground defenses, but becomes very powerful with %s.",
+            5f,
+            Misc.getHighlightColor(),
+            "improved heavy batteries"
+        ).color = Misc.getGrayColor()
+    }
+
+    override fun modifyAutoresolveForOurFleet(data: BattleAutoresolverPluginImpl.FleetAutoresolveData) {
+        val ourMember = data.members.firstOrNull { it.member.isStation } ?: return
+        var ourMult = apToMemberStrengthMult
+        val numAsbs = getNumASBSToPlace().first
+        val asbRatio = (numAsbs / AUTORESOLVE_ASB_NUM_ANCHOR)
+        ourMult *= asbRatio
+
+        val ap = getAugmentCost()
+        val strength = (ap * ourMult)
+        ourMember.strength += strength
+    }
+
+    class DelayedASBPlatformAdd(
+        val asbs: MutableSet<BattleObjective>,
+        val station: ShipAPI
+    ): BaseEveryFrameCombatPlugin() {
+
+        override fun advance(amount: Float, events: List<InputEventAPI?>?) {
+            super.advance(amount, events)
+
+            val engine = Global.getCombatEngine()
+            var no_enemy_ships = true
+
+            for (ship in engine.ships) {
+                if (ship.owner == 1 && !ship.hullSpec.hasTag("sotf_reinforcementship") && !ship.hullSpec.hasTag("sotf_empl") && !ship.isHulk && !ship.isFighter
+                ) {
+                    no_enemy_ships = false
+                }
+            }
+
+            if (!no_enemy_ships) {
+                finalizeDeployment(asbs, station, station.owner, station.owner == 0)
+                engine.removePlugin(this)
+                return
+            }
+        }
+
+        private fun finalizeDeployment(
+            objectives: MutableSet<BattleObjective>,
+            station: ShipAPI,
+            owner: Int,
+            playerside: Boolean
+        ) {
+            for (objective in objectives) {
+                val existingTime = ReflectionUtils.get("capTime", objective, BattleObjective::class.java) as Float
+                //val newTime = existingTime * 2f
+                //ReflectionUtils.set("capTime", objective, newTime, BattleObjective::class.java)
+                ReflectionUtils.set("capProgress", objective, existingTime + 1, BattleObjective::class.java)
+                ReflectionUtils.set("capOwner", objective, owner, BattleObjective::class.java)
+                ReflectionUtils.invoke("advance", objective, 1f)
+            }
+        }
     }
 }

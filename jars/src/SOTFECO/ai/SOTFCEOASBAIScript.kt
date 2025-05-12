@@ -140,9 +140,14 @@ class SOTFCEOASBAIScript: ShipSystemAIScript {
             val possibleTarget = iterator.next() as? ShipAPI ?: continue
             if (possibleTarget.owner == ship.owner) continue
             if (possibleTarget.isFighter && !possibleTarget.hasTag("fake_fighter")) continue
+            if (!possibleTarget.isHullDamageable()) continue
 
             list += possibleTarget
         }
         return list
+    }
+
+    fun ShipAPI.isHullDamageable(): Boolean {
+        return !(this.mutableStats.hullDamageTakenMult.getModifiedValue() <= 0.0f)
     }
 }

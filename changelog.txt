@@ -7,13 +7,13 @@ New [ULTRA REDACTED] objectives
     1. Constructs a few [ULTRA REDACTED] ships
         At least one overseer is guaranteed
         Fabricators can be constructed, but it requires you to enable it in lunasettings
+        As with other one-time objectives that spawn ships, allowing the enemy to capture it has a chance to add
+        special items to the battle loot
+
     2. Just a threat emplacement
         Has a modified energy lash that can buff non-threat ships
         Four variants
         Very strong for an emplacement, but has capture time and respawn time to match
-
-    As with other one-time objectives that spawn ships, allowing the enemy to capture it has a chance to add
-    special items to the battle loot
 
 Dustkeeper emplacements now spawn
     High chance in dustkeeper systems
@@ -31,6 +31,8 @@ Shield generator no longer renders the FF indicator of the shield drone, nor its
 Added station augment integration
     ASB Coordinator
         Spawns a number of ASB uplinks behind the station, depending on the ground defenses of the market
+
+ASB uplinks no longer target undamageable ships
 
 1.0.1
 Fixes a crash with ASB targetting modules
