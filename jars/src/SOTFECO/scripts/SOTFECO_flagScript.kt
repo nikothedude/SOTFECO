@@ -12,6 +12,7 @@ import com.fs.starfarer.api.combat.EngagementResultAPI
 import com.fs.starfarer.api.util.IntervalUtil
 import com.fs.starfarer.api.util.Misc
 import data.scripts.campaign.ids.SotfIDs
+import java.awt.Container
 
 class SOTFECO_flagScript: EveryFrameScript, CampaignEventListener {
 
@@ -30,12 +31,8 @@ class SOTFECO_flagScript: EveryFrameScript, CampaignEventListener {
 
         fun canSpawnGenericIntrusionNode(): Boolean {
             if (Global.getSector().memoryWithoutUpdate.getBoolean("\$SOTFECO_debugGenericIntrusionNode")) return true
-            val playerFleet = Global.getSector().playerFleet ?: return false
-            val playerLocation = playerFleet.containingLocation ?: return false
             if (dustKeepersHostile()) return false
-            for (market in Global.getSector().economy.getMarkets(playerLocation)) {
-                if (market.hasCondition(SotfIDs.CONDITION_PROXYPATROLS) && market.getCondition(SotfIDs.CONDITION_PROXYPATROLS).plugin.showIcon()) return true
-            }
+            if (!inProxyLocation()) return false
 
             return false
         }
@@ -44,6 +41,14 @@ class SOTFECO_flagScript: EveryFrameScript, CampaignEventListener {
             if (Global.getSector().memoryWithoutUpdate.contains(SotfIDs.MEM_DUSTKEEPER_HATRED)) return true
             if (Global.getSector().getFaction(SotfIDs.DUSTKEEPERS).relToPlayer.isHostile) return true
 
+            return false
+        }
+
+        fun inProxyLocation(playerLocation: LocationAPI? = Global.getSector()?.playerFleet?.containingLocation): Boolean {
+            if (playerLocation == null) return false
+            for (market in Global.getSector().economy.getMarkets(playerLocation)) {
+                if (market.hasCondition(SotfIDs.CONDITION_PROXYPATROLS) && market.getCondition(SotfIDs.CONDITION_PROXYPATROLS).plugin.showIcon()) return true
+            }
             return false
         }
     }

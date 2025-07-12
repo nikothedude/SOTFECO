@@ -39,7 +39,7 @@ abstract class SOTFCEOASBScript : BaseShipSystemScript() {
 
         val ship = stats.entity as? ShipAPI ?: return
         val target = findTarget(ship) ?: return
-        val moduleCore = target.parentStation ?: ship
+        val moduleCore = target.parentStation ?: target
 
         val params = SotfASBLockOnScript.ASBParams(
             ship,

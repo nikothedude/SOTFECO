@@ -68,7 +68,7 @@ abstract class SOTFCEO_threatConstructionSwarm: SOTFCEO_threatSwarm() {
                 }
                 BaseSalvageSpecial.addExtraSalvage(mainEnemyFleet, extraLoot)
                 //mainEnemyFleet.getCargo().addWeapons(picked.getId(), 1);
-                Global.getLogger(this.javaClass).info("Successfully added Substrate to cargo of " + mainEnemyFleet.fullName)
+                Global.getLogger(this.javaClass).info("Successfully added threat loot to cargo of " + mainEnemyFleet.fullName)
 
             }
         }

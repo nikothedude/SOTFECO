@@ -1,3 +1,11 @@
+1.1.1
+
+Dustkeeper emplacements, if spawned by proxy warfleet condition, now start deployed by your side
+
+ASB platforms now correclty identify who they're shooting at
+
+Shield generators have halved overloda times
+
 1.1.0
 
 New [ULTRA REDACTED] objectives

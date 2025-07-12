@@ -11,6 +11,7 @@ import com.fs.starfarer.combat.entities.BattleObjective
 class SOTFCEO_dustkeeperEmplacement: SotfEmplacementEffect() {
 
     var betrayed = false
+    var activatedForPlayer = false
 
     companion object {
         fun announceBetrayal() {
@@ -23,6 +24,18 @@ class SOTFCEO_dustkeeperEmplacement: SotfEmplacementEffect() {
             )
 
             Global.getCombatEngine().customData["\$SOTFCEO_emplacementsBetrayed"] = true
+        }
+
+        fun announceActivation() {
+            if (Global.getCombatEngine().customData["\$SOTFCEO_PROXemplacementsActivated"] == true) return
+
+            val defectString = "Alert: Dustkeeper defensive measures activating"
+            Global.getCombatEngine().combatUI.addMessage(
+                1,
+                Misc.getPositiveHighlightColor(), defectString
+            )
+
+            Global.getCombatEngine().customData["\$SOTFCEO_PROXemplacementsActivated"] = true
         }
     }
 
@@ -54,7 +67,16 @@ class SOTFCEO_dustkeeperEmplacement: SotfEmplacementEffect() {
                     allyManager.removeAssignment(assignment)
                 }
             }
+        } else if (!activatedForPlayer && SOTFECO_flagScript.inProxyLocation()) {
+            // these are technically owned by the player to begin with
+            announceActivation()
 
+            val battleObjective: BattleObjective = objective as? BattleObjective ?: return
+
+            ReflectionUtils.set("capProgress", battleObjective, 1001, BattleObjective::class.java)
+            ReflectionUtils.set("capOwner", battleObjective, 0, BattleObjective::class.java)
+
+            activatedForPlayer = true
         }
     }
 }

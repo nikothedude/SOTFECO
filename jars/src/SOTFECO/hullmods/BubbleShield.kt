@@ -14,7 +14,7 @@ class BubbleShield: BaseHullMod() {
         const val CONSTANT_DISSIPATION = 250f
         const val UNFOLD_RATE_MULT = 3f
 
-        const val OVERLOAD_DURATION_MULT = 6f
+        const val OVERLOAD_DURATION_MULT = 3f
     }
 
     override fun applyEffectsAfterShipCreation(ship: ShipAPI?, id: String?) {
