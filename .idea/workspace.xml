@@ -4,16 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f1eb7bc-6999-4c00-9b3a-f291104d7b7d" name="Changes" comment="aaaaaaaaaaaaaaaaaaaaaabbbbbb">
+    <list default="true" id="3f1eb7bc-6999-4c00-9b3a-f291104d7b7d" name="Changes" comment="aaaaaaaaaaaaaa">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/SEEKER.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_derelictShipsObj.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFECO_deployWarpObj.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFECO_mercBeaconObj.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/campaign/SOTFECO_crackableAsteroid.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/campaign/SOTFECO_creditCache.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/campaign/note.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/magiclib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/magiclib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/secretsofthefrontier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/secretsofthefrontier.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOTF - Extra Combat Objectives.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SOTF - Extra Combat Objectives.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SOTFECO.version" beforeDir="false" afterPath="$PROJECT_DIR$/SOTFECO.version" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/changelog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/changelog.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/config/battle_objectives.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/config/battle_objectives.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/config/sotf/objective_spawns.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/config/sotf/objective_spawns.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/config/sounds.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/config/sounds.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jars/SOTFECO.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jars/SOTFECO.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/SOTFCEOASBScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/SOTFCEOASBScript.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/augments/ASBPlatforms.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/augments/ASBPlatforms.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_dustkeeperEmplacement.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_dustkeeperEmplacement.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/threat/constructor/SOTFCEO_threatConstructionSwarm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/threat/constructor/SOTFCEO_threatConstructionSwarm.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/hullmods/BubbleShield.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/hullmods/BubbleShield.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/scripts/SOTFECO_flagScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/scripts/SOTFECO_flagScript.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mod_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/mod_info.json" afterDir="false" />
     </list>
@@ -37,7 +45,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -55,7 +62,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1746369769" />
+                    <option name="lastUsedInstant" value="1754258299" />
                   </RecentBranch>
                 </list>
               </option>
@@ -69,34 +76,33 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/nikothedude/SOTFECO&quot;,
-    &quot;accountId&quot;: &quot;f226f0a4-01a8-4fff-8bb0-879573ab9a5b&quot;
+    &quot;accountId&quot;: &quot;1509c350-b29e-4d93-b5f4-7700d759e134&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2vT6i8vn8JHpbukRXalG4fpb54k" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Run Starsector.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Starsector/mods/More Planetary Conditions",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15332031",
-    "project.structure.side.proportion": "0.20689656",
-    "settings.editor.selected.configurable": "project.propCompiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Run Starsector.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Starsector/mods/More Planetary Conditions&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15332031&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.20689656&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateKotlinClassDialog.RecentsKey">
       <recent name="SOTFECO" />
@@ -106,9 +112,10 @@
       <recent name="SOTFECO.combatObj" />
     </key>
     <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
+      <recent name="SOTFECO.combatObj.campaign" />
+      <recent name="SOTFECO.combatObj" />
       <recent name="SOTFECO.combatObj.threat.constructor" />
       <recent name="SOTFECO.combatObj.threat" />
-      <recent name="SOTFECO.combatObj" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

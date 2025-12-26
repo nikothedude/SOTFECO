@@ -1,3 +1,19 @@
+1.2.0
+
+Fixed threat/dweller objectives not spawning in places they should, ugh
+
+Added a few new objectives
+    Credit cache
+        Very rare
+
+        Long cap time, gives you credits
+        Doesnt spawn if youre not poor
+
+    Gravitic anchor
+        Very rare
+        Long cap time
+        Warps newly deployed ships to it
+
 1.1.1
 
 Dustkeeper emplacements, if spawned by proxy warfleet condition, now start deployed by your side

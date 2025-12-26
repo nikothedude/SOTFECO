@@ -2,6 +2,7 @@ package SOTFECO.scripts
 
 import SOTFECO.SOTFECO_settings
 import SOTFECO.SOTFECO_settings.IGNORE_PREVIOUS_ENCOUNTER_REQS
+import SOTFECO.combatObj.campaign.SOTFECO_creditCache
 import com.fs.starfarer.api.EveryFrameScript
 import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.campaign.*
@@ -9,6 +10,7 @@ import com.fs.starfarer.api.campaign.econ.MarketAPI
 import com.fs.starfarer.api.characters.AbilityPlugin
 import com.fs.starfarer.api.characters.PersonAPI
 import com.fs.starfarer.api.combat.EngagementResultAPI
+import com.fs.starfarer.api.impl.campaign.ids.Terrain
 import com.fs.starfarer.api.util.IntervalUtil
 import com.fs.starfarer.api.util.Misc
 import data.scripts.campaign.ids.SotfIDs
@@ -51,6 +53,19 @@ class SOTFECO_flagScript: EveryFrameScript, CampaignEventListener {
             }
             return false
         }
+
+        fun playerInAsteroidPlace(): Boolean {
+            val playerFleet = Global.getSector().playerFleet ?: return false
+            val playerLoc = playerFleet.containingLocation as? StarSystemAPI ?: return false
+
+            val terrain = playerLoc.terrainCopy
+            for (iterTerrain in terrain) {
+                if (!iterTerrain.plugin.containsEntity(playerFleet)) continue
+                if (iterTerrain.plugin.spec.id == Terrain.ASTEROID_FIELD || iterTerrain.plugin.spec.id == Terrain.ASTEROID_BELT) return true
+            }
+
+            return false
+        }
     }
 
     val interval = IntervalUtil(0.2f, 0.3f) // days
@@ -65,16 +80,26 @@ class SOTFECO_flagScript: EveryFrameScript, CampaignEventListener {
             updateAbyssFlag()
             updateMonsterFlag()
             checkIntrusionNodeGenericFlag()
+            updateCreditCacheFlag()
+            updateAsteroidFlag()
         }
     }
 
     private fun updateMonsterFlag() {
-        SOTFECO_settings.toggleFlag("\$SOTF_ECOencounteredDweller", IGNORE_PREVIOUS_ENCOUNTER_REQS || Global.getSector().playerMemoryWithoutUpdate.getBoolean("\$encounteredDweller"))
-        SOTFECO_settings.toggleFlag("\$SOTF_ECOencounteredThreat", IGNORE_PREVIOUS_ENCOUNTER_REQS || Global.getSector().playerMemoryWithoutUpdate.getBoolean("\$encounteredThreat"))
+        SOTFECO_settings.toggleFlag("\$SOTFECO_encounteredDweller", IGNORE_PREVIOUS_ENCOUNTER_REQS || Global.getSector().playerMemoryWithoutUpdate.getBoolean("\$encounteredDweller"))
+        SOTFECO_settings.toggleFlag("\$SOTFECO_encounteredThreat", IGNORE_PREVIOUS_ENCOUNTER_REQS || Global.getSector().playerMemoryWithoutUpdate.getBoolean("\$encounteredThreat"))
     }
 
     private fun updateAbyssFlag() {
         SOTFECO_settings.toggleFlag("\$SOTFECO_playerInAbyss", playerInAbyss())
+    }
+
+    private fun updateCreditCacheFlag() {
+        SOTFECO_settings.toggleFlag("\$SOTFECO_playerInAbyss", SOTFECO_creditCache.playerIsPoor())
+    }
+
+    fun updateAsteroidFlag() {
+        SOTFECO_settings.toggleFlag("\$SOTFECO_canSpawnAsteroid", playerInAsteroidPlace())
     }
 
     override fun reportPlayerOpenedMarket(market: MarketAPI?) {
@@ -82,6 +107,8 @@ class SOTFECO_flagScript: EveryFrameScript, CampaignEventListener {
     }
 
     override fun reportPlayerClosedMarket(market: MarketAPI?) {
+        updateCreditCacheFlag()
+
         return
     }
 
@@ -148,6 +175,12 @@ class SOTFECO_flagScript: EveryFrameScript, CampaignEventListener {
     }
 
     override fun reportShownInteractionDialog(dialog: InteractionDialogAPI?) {
+        updateAbyssFlag()
+        updateMonsterFlag()
+        checkIntrusionNodeGenericFlag()
+        updateCreditCacheFlag()
+        updateAsteroidFlag()
+
         return
     }
 

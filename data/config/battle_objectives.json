@@ -109,4 +109,34 @@
 		"battleSizeFractionBonus":0.04,
 		"effectClass":"SOTFECO.combatObj.threat.SOTFECO_threatEmplacementEffect",
 	},
+
+    "softCEO_objective_credit":{
+      "name":"Credit Cache",
+      "icon":"graphics/warroom/sotf_ECO_credit_obj.png",
+      "sprite":"graphics/stations/cargo_pod_special.png",
+      "spriteScale":1,
+      "captureTime":20,
+      "battleSizeFractionBonus":0.00,
+      "effectClass":"SOTFECO.combatObj.campaign.SOTFECO_creditCache",
+    },
+
+    "softCEO_objective_asteroid":{
+      "name":"Mineral-Rich Asteroid",
+      "icon":"graphics/warroom/sotf_objective_unknown.png",
+      "sprite":"graphics/asteroids/sotf_ECO_asteroid_obj.png",
+      "spriteScale":1,
+      "captureTime":20,
+      "battleSizeFractionBonus":0.00,
+      "effectClass":"SOTFECO.combatObj.campaign.SOTFECO_crackableAsteroid",
+    },
+
+    "softCEO_objective_warp":{
+      "name":"Gravitic Anchor",
+      "icon":"graphics/warroom/sotf_ECO_warp_obj.png",
+      "sprite":"graphics/missiles/stealth_mine3.png",
+      "spriteScale":1.5,
+      "captureTime":20,
+      "battleSizeFractionBonus":0.04,
+      "effectClass":"SOTFECO.combatObj.SOTFECO_deployWarpObj",
+    }
 }
