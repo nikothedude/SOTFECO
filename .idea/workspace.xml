@@ -5,25 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f1eb7bc-6999-4c00-9b3a-f291104d7b7d" name="Changes" comment="aaaaaaaaaaaaaa">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/SEEKER.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_derelictShipsObj.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFECO_deployWarpObj.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFECO_mercBeaconObj.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/campaign/SOTFECO_crackableAsteroid.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/campaign/SOTFECO_creditCache.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/campaign/note.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/magiclib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/magiclib.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/secretsofthefrontier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/secretsofthefrontier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFECO_derelictFleetObj.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SOTF - Extra Combat Objectives.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SOTF - Extra Combat Objectives.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SOTFECO.version" beforeDir="false" afterPath="$PROJECT_DIR$/SOTFECO.version" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changelog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/changelog.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/config/battle_objectives.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/config/battle_objectives.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/config/sotf/objective_spawns.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/config/sotf/objective_spawns.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/config/sounds.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/config/sounds.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/SOTFECO.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jars/SOTFECO.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/scripts/SOTFECO_flagScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/scripts/SOTFECO_flagScript.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mod_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/mod_info.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
