@@ -1,6 +1,8 @@
 1.2.0
 
 Fixed threat/dweller objectives not spawning in places they should, ugh
+Shield generators are no longer penetrated by plasma cannons and such
+Shield generators now use opacity instead of jitter to communicate shield HP
 
 Added a few new objectives
     Credit cache
@@ -9,10 +11,41 @@ Added a few new objectives
         Long cap time, gives you credits
         Doesnt spawn if youre not poor
 
-    Gravitic anchor
+    Mineral-Rich Asteroid
+        Rare, only spawns in asteroid fields/belts
+
+        Long cap time
+        When captured, spawns a bomb on the asteroid
+        When it detonates, the aSteroid explodes into a billion pieces, each of which can be collected to gain ore/volatiles
+
+    Warp Beacon
         Very rare
         Long cap time
         Warps newly deployed ships to it
+
+    Derelict Fleet
+        Very Rare
+        Long cap time
+
+        A group of heavily damaged ships, primarily freighters
+        Hail you when you arrive, asking for help, or begging for mercy
+
+        Can spawn in 3 modes
+            Friendly
+            Hostile
+            Oh Fuck Oh Shit
+
+            Friendly objectives are friendly to you, hostile to the enemy
+            Vice versa for hostile
+            Oh fuck oh shit is hostile to both sides, and is rare
+
+        When captured, repairs the ships and increases CR to 30%. They tehn join the battle with 0 DP contribution
+
+        If captured by a friendly side, begins an immediate retreat
+            If retreat is successful, and the side has the player in it, the player will get a bunch of resources and rep
+        If captured by a hostile side, the ships are repaired and added to a random fleet of the hostile side
+            Yes. ADDED
+            These ships do not retreat and can be used in combat
 
 1.1.1
 

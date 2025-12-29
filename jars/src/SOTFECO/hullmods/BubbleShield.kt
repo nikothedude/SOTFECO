@@ -2,6 +2,7 @@ package SOTFECO.hullmods
 
 import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.combat.*
+import com.fs.starfarer.api.combat.listeners.DamageTakenModifier
 import com.fs.starfarer.api.impl.campaign.ids.Stats
 import com.fs.starfarer.api.input.InputEventAPI
 import org.lazywizard.lazylib.MathUtils
@@ -47,6 +48,8 @@ class BubbleShield: BaseHullMod() {
             shieldDrone.isAlly = ship.isAlly
             shieldDrone.isHoldFire = true
             fleetManager.isSuppressDeploymentMessages = false
+
+            shieldDrone.addListener(BubbleShieldDamageNullifier())
 
             shieldDrone.setShield(ShieldAPI.ShieldType.OMNI, 0f, 1f, 360f)
             shieldDrone.mutableStats.shieldUnfoldRateMult.modifyFlat(id, 1f)
@@ -108,19 +111,40 @@ class BubbleShield: BaseHullMod() {
             }*/
 
             val fluxUsed = fxDrone.fluxTracker.fluxLevel
-            val jitterIntensity = (fluxUsed * JITTER_STRENGTH_MULT)
+            /*val jitterIntensity = (fluxUsed * JITTER_STRENGTH_MULT)
             if (jitterIntensity > 0f) {
                 val jitterRange = (MAX_JITTER_RANGE * fluxUsed)
 
                 fxDrone.isJitterShields = true
                 fxDrone.setJitter("bubbleShieldJitter", fxDrone.shield.innerColor, jitterIntensity, 1, jitterRange)
-            }
+            }*/
+
+            fxDrone.extraAlphaMult2 = (1f - (fxDrone.fluxTracker.fluxLevel * 0.9f))
 
             if (station.isHulk || !station.isAlive) {
                 fxDrone.mutableStats.hullDamageTakenMult.unmodify()
                 Global.getCombatEngine().removeEntity(fxDrone)
                 Global.getCombatEngine().removePlugin(this)
             }
+        }
+    }
+
+    class BubbleShieldDamageNullifier(): DamageTakenModifier {
+        override fun modifyDamageTaken(
+            param: Any?,
+            target: CombatEntityAPI?,
+            damage: DamageAPI?,
+            point: Vector2f?,
+            shieldHit: Boolean
+        ): String? {
+            if (param !is DamagingProjectileAPI) return null
+            if (!shieldHit) return null
+
+            if (param.projectileSpec?.isPassThroughFighters == true) {
+                Global.getCombatEngine().removeEntity(param)
+            }
+
+            return null
         }
     }
 

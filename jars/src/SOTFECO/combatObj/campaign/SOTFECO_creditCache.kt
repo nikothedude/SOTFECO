@@ -52,7 +52,7 @@ class SOTFECO_creditCache: BaseBattleObjectiveEffect() {
         }
 
         if (isCaptured()) {
-            if (objective.owner == 1) {
+            if (objective.owner == 0) {
                 engine.combatUI.addMessage(
                     1,
                     Misc.getPositiveHighlightColor(),

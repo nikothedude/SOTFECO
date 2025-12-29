@@ -182,7 +182,7 @@ class SOTFECO_deployWarpObj: BaseBattleObjectiveEffect() {
         return String.format(
             """
             - warp-point for deploying ships
-            - deploying vessels will warp to the furthest gravitic anchor after a small delay
+            - deploying vessels will warp to the furthest warp beacon after a small delay
             - if an anchor has a 'rally civilian craft' order, it will not be used
             - hold fire to prematurely exit
             - non-functional if contested
@@ -290,7 +290,7 @@ class SOTFECO_deployWarpObj: BaseBattleObjectiveEffect() {
                 Global.getCombatEngine().maintainStatusForPlayerShip(
                     "SOTFECO_warpScript",
                     "graphics/icons/hullsys/displacer.png",
-                    "Gravitic Anchor",
+                    "Warp Beacon",
                     "Warping to ${obj.objective.displayName}",
                     false
                 )
@@ -361,6 +361,7 @@ class SOTFECO_deployWarpObj: BaseBattleObjectiveEffect() {
                 Misc.ZERO
             )
 
+            ship.shipAI.forceCircumstanceEvaluation()
             ship.extraAlphaMult2 = 1f
         }
     }

@@ -25,7 +25,7 @@ object ReflectionUtils { // yoinked from exotica which yoinked it from rat i lov
     private val methodClass = Class.forName("java.lang.reflect.Method", false, Class::class.java.classLoader)
     private val getMethodNameHandle =
         MethodHandles.lookup().findVirtual(methodClass, "getName", MethodType.methodType(String::class.java))
-    private val invokeMethodHandle = MethodHandles.lookup().findVirtual(
+    val invokeMethodHandle = MethodHandles.lookup().findVirtual(
         methodClass,
         "invoke",
         MethodType.methodType(Any::class.java, Any::class.java, Array<Any>::class.java)

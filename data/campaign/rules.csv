@@ -1,0 +1,19 @@
+id,trigger,conditions,script,text,options,notes
+#RULESET_NAME SOTFECO,,,,,,
+,,,,,,
+# Derelict fleet hailing,,,,,,
+SOTFECO_derelictHailInit,SOTFECO_derelictsGivingLootHail,,"SOTFECO_derelictFleetCMD addLoot
+AddTextSmall ""Received surplus goods"" good","The rickety state of the approaching fleet makes opening a comms link difficult, but withn your crack team of engineers, it soon becomes possible. It suddenly crackles to life, plagued by spots and blotches, but still just clear enough to reveal the smiling face of the $post, held by the backdrop of their ravaged, sparking bridge.
+
+""You came at the perfect time. Well, not quite, as you ah, brought us a good bit of trouble."" $HeOrShe chuckles. ""But! A promise is a promise. Here you are. We've hit a few places on our time out here, and you've more than earned it.""
+
+Your quartermaster quickly queries you about a flotilla of incoming cargo drones, which you wave off with an approving nod. Soon, your spoils are in your holds, and the flurry of inter-fleet traffic dies to a lull.",SOTFECO_derelictFleetTwo:Continue,
+SOTFECO_derelictFleetTwo,DialogOptionSelected,$option == SOTFECO_derelictFleetTwo,"SOTFECO_derelictFleetCMD doRep
+SOTFECO_derelictFleetCMD makeUnimportant","""It's the least we could do."" $HeOrShe continues. ""Without you, we'd have died of starvation, thirst... the list goes on."" $HeOrShe sighs.
+
+""But that's in the past now. From here, we'll find ourselves a nice port and settle down a bit - pass the good word on, and so forth. I wish you safe travels! Burn bright!""","SOTFECO_derelictFleetEnd:""Burn bright.""",
+SOTFECO_derelictFleetEnd,DialogOptionSelected,$option == SOTFECO_derelictFleetEnd,"AddTextSmall ""The fleet may have more loot within its holds, if you were to destroy it"" bad
+unset $entity.genericHail
+$option = cutCommLink
+FireBest DialogOptionSelected","And with that, the commlink dies. The fleet moves to maneuver back towards the core worlds, and you're left with yourself, a cargo hold full of loot... and a fleeting, sinister idea. What if?",,
+#END Derelict fleet hailing,,,,,,

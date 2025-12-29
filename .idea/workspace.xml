@@ -5,8 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f1eb7bc-6999-4c00-9b3a-f291104d7b7d" name="Changes" comment="aaaaaaaaaaaaaa">
-      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFECO_derelictFleetObj.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/SOTFECO_combatPingScript.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/SOTFECO_reflectionUtilsTwo.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFECO_theOneJavaLine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/rulecmd/SOTFECO_derelictFleetCMD.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOTF - Extra Combat Objectives.7z" beforeDir="false" afterPath="$PROJECT_DIR$/SOTF - Extra Combat Objectives.7z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changelog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/changelog.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/config/battle_objectives.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/config/battle_objectives.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/config/sotf/objective_spawns.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/config/sotf/objective_spawns.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hulls/SOTFECO_emplMidT2.ship" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/SOTFECO.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jars/SOTFECO.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/ReflectionUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/ReflectionUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFECO_deployWarpObj.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFECO_deployWarpObj.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFECO_derelictFleetObj.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFECO_derelictFleetObj.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFECO_mercBeaconObj.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/campaign/SOTFECO_creditCache.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/campaign/SOTFECO_creditCache.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/hullmods/BubbleShield.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/hullmods/BubbleShield.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/scripts/SOTFECO_flagScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/scripts/SOTFECO_flagScript.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +33,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Object" />
+        <option value="Class" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -59,7 +76,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/nikothedude/SOTFECO&quot;,
-    &quot;accountId&quot;: &quot;1509c350-b29e-4d93-b5f4-7700d759e134&quot;
+    &quot;accountId&quot;: &quot;f226f0a4-01a8-4fff-8bb0-879573ab9a5b&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -176,6 +193,20 @@
           <line>238</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <breakpoint type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="7" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/jars/src/SOTFECO/ReflectionUtils.kt</url>
+          <line>181</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/jars/src/SOTFECO/hullmods/BubbleShield.kt</url>
+          <line>143</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -185,6 +216,7 @@
         <watch expression="row.getString(&quot;id&quot;)" language="JAVA" />
         <watch expression="ASBScript" language="kotlin" />
         <watch expression="picker" language="kotlin" />
+        <watch expression="ship" language="kotlin" custom="import com.fs.starfarer.combat.ai.BasicShipAI,import com.fs.starfarer.combat.tasks.CombatTaskManager" />
       </configuration>
     </watches-manager>
   </component>

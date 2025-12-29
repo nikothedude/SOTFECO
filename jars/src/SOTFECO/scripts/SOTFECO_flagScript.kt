@@ -95,7 +95,7 @@ class SOTFECO_flagScript: EveryFrameScript, CampaignEventListener {
     }
 
     private fun updateCreditCacheFlag() {
-        SOTFECO_settings.toggleFlag("\$SOTFECO_playerInAbyss", SOTFECO_creditCache.playerIsPoor())
+        SOTFECO_settings.toggleFlag("\$SOTFECO_canSpawnCreditCache", SOTFECO_creditCache.playerIsPoor())
     }
 
     fun updateAsteroidFlag() {

@@ -122,8 +122,8 @@
 
     "softCEO_objective_asteroid":{
       "name":"Mineral-Rich Asteroid",
-      "icon":"graphics/warroom/sotf_objective_unknown.png",
-      "sprite":"graphics/asteroids/sotf_ECO_asteroid_obj.png",
+      "icon":"graphics/warroom/sotf_ECO_asteroid_obj.png",
+      "sprite":"graphics/asteroids/asteroid4.png",
       "spriteScale":1,
       "captureTime":20,
       "battleSizeFractionBonus":0.00,
@@ -131,12 +131,22 @@
     },
 
     "softCEO_objective_warp":{
-      "name":"Gravitic Anchor",
+      "name":"Warp Beacon",
       "icon":"graphics/warroom/sotf_ECO_warp_obj.png",
       "sprite":"graphics/missiles/stealth_mine3.png",
       "spriteScale":1.5,
       "captureTime":20,
-      "battleSizeFractionBonus":0.04,
+      "battleSizeFractionBonus":0.02,
       "effectClass":"SOTFECO.combatObj.SOTFECO_deployWarpObj",
-    }
+    },
+
+	"softCEO_objective_derelict_fleet":{
+		"name":"Derelict Fleet",
+		"icon":"graphics/warroom/sotf_ECO_derelict_fleet.png",
+		"sprite":"graphics/fx/empty.png",
+		"spriteScale":1,
+		"captureTime":30,
+		"battleSizeFractionBonus":0.00,
+		"effectClass":"SOTFECO.combatObj.SOTFECO_derelictFleetObj",
+	}
 }
