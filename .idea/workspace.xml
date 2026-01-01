@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f1eb7bc-6999-4c00-9b3a-f291104d7b7d" name="Changes" comment="aaaaaaaaaaaaaa">
+    <list default="true" id="3f1eb7bc-6999-4c00-9b3a-f291104d7b7d" name="Changes" comment="more fixes yay">
+      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/faction/SOTFECO_diktatEmplacement.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jars/src/SOTFECO/hullmods/DiktatPropaganda.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/changelog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/changelog.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/config/battle_objectives.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/config/battle_objectives.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/config/sotf/emplacement_variants.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/config/sotf/emplacement_variants.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/config/sotf/objective_spawns.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/config/sotf/objective_spawns.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hullmods/hull_mods.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/hullmods/hull_mods.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jars/SOTFECO.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jars/SOTFECO.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_derelictShipsObj.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_dustkeeperEmplacement.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_dustkeeperEmplacement.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFECO_deployWarpObj.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFECO_deployWarpObj.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFECO_derelictFleetObj.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFECO_derelictFleetObj.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/campaign/SOTFECO_crackableAsteroid.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/campaign/SOTFECO_crackableAsteroid.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/scripts/SOTFECO_flagScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/scripts/SOTFECO_flagScript.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +151,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746369907258</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="more fixes yay">
+      <option name="closed" value="true" />
+      <created>1767297875741</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1767297875741</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -169,7 +178,8 @@
     <MESSAGE value="two" />
     <MESSAGE value="forum" />
     <MESSAGE value="ugh" />
-    <option name="LAST_COMMIT_MESSAGE" value="ugh" />
+    <MESSAGE value="more fixes yay" />
+    <option name="LAST_COMMIT_MESSAGE" value="more fixes yay" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -183,6 +193,12 @@
           <url>file://$PROJECT_DIR$/../Secrets of the Frontier 0.14.5b/jars/src/data/scripts/plugins/SotfBattleCreationPluginImpl.java</url>
           <line>238</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <condition expression="(row.getString(&quot;id&quot;).equals(&quot;sotfCEO_diktat_objective_general&quot;))" language="JAVA" />
+          <url>file://$PROJECT_DIR$/../Secrets of the Frontier 0.15.1/jars/src/data/scripts/plugins/SotfBattleCreationPluginImpl.java</url>
+          <line>942</line>
+          <option name="timeStamp" value="72" />
         </line-breakpoint>
         <breakpoint type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />

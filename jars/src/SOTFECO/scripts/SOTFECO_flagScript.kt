@@ -14,11 +14,15 @@ import com.fs.starfarer.api.impl.campaign.ids.Terrain
 import com.fs.starfarer.api.util.IntervalUtil
 import com.fs.starfarer.api.util.Misc
 import data.scripts.campaign.ids.SotfIDs
+import org.magiclib.kotlin.getMarketsInLocation
 import java.awt.Container
 
 class SOTFECO_flagScript: EveryFrameScript, CampaignEventListener {
 
     companion object {
+        const val FACTION_FLAG_BASE = "\$SOTFECO_canSpawnFactionObj_"
+        const val MIN_COLONY_SIZE_FOR_OBJS = 4
+
         fun playerInAbyss(): Boolean {
             val playerFleet = Global.getSector().playerFleet ?: return false
             if (!playerFleet.isInHyperspace) return false
@@ -82,8 +86,29 @@ class SOTFECO_flagScript: EveryFrameScript, CampaignEventListener {
             checkIntrusionNodeGenericFlag()
             updateCreditCacheFlag()
             updateAsteroidFlag()
+            //updateFactionFlags() // a little more expensive, just do it on jump
         }
     }
+
+    fun updateFactionFlags() {
+        unsetFactionFlags()
+        val playerLoc = Global.getSector().currentLocation ?: return
+        val markets = playerLoc.getMarketsInLocation()
+        if (markets.isEmpty()) return
+        val largest = markets.maxBy { it.size }
+        if (largest.size < MIN_COLONY_SIZE_FOR_OBJS) return
+
+        val flag = getFactionFlag(largest.faction)
+        SOTFECO_settings.toggleFlag(flag, true)
+    }
+
+    private fun unsetFactionFlags() {
+        for (faction in Global.getSector().allFactions) {
+            Global.getSector().memoryWithoutUpdate.unset(getFactionFlag(faction))
+        }
+    }
+
+    fun getFactionFlag(faction: FactionAPI) = "$FACTION_FLAG_BASE${faction.id}"
 
     private fun updateMonsterFlag() {
         SOTFECO_settings.toggleFlag("\$SOTFECO_encounteredDweller", IGNORE_PREVIOUS_ENCOUNTER_REQS || Global.getSector().playerMemoryWithoutUpdate.getBoolean("\$encounteredDweller"))
@@ -172,6 +197,7 @@ class SOTFECO_flagScript: EveryFrameScript, CampaignEventListener {
         if (fleet != Global.getSector().playerFleet) return
         checkIntrusionNodeGenericFlag()
         updateAbyssFlag()
+        updateFactionFlags()
     }
 
     override fun reportShownInteractionDialog(dialog: InteractionDialogAPI?) {
@@ -180,6 +206,7 @@ class SOTFECO_flagScript: EveryFrameScript, CampaignEventListener {
         checkIntrusionNodeGenericFlag()
         updateCreditCacheFlag()
         updateAsteroidFlag()
+        updateFactionFlags()
 
         return
     }

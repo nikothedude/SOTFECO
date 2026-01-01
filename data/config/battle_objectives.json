@@ -148,5 +148,15 @@
 		"captureTime":30,
 		"battleSizeFractionBonus":0.00,
 		"effectClass":"SOTFECO.combatObj.SOTFECO_derelictFleetObj",
-	}
+	},
+
+    "sotfCEO_diktat_objective":{
+      "name":"Propaganda Transmitter",
+      "icon":"graphics/warroom/sotf_objective_empl.png",
+      "sprite":"graphics/fx/empty.png",
+      "spriteScale":1,
+      "captureTime":5,
+      "battleSizeFractionBonus":0.12, # very good
+      "effectClass":"SOTFECO.combatObj.faction.SOTFECO_diktatEmplacement"
+    }
 }

@@ -6,6 +6,14 @@ Shield generators now use opacity instead of jitter to communicate shield HP
 Intrusion nodes no longer randomly explode
 
 Added a few new objectives
+    Propaganda Transmitter
+        Diktat-only
+            Spwans in systems where the largest established colony is diktat
+
+        Has a large DP contribution, but...
+        Reduces the combat effectiveness of nearby friendly LG ships
+            It is VERY ANNOYING to the gunners
+
     Credit cache
         Very rare
 
