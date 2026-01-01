@@ -1,6 +1,5 @@
 package SOTFECO.combatObj
 
-import SOTFECO.ReflectionUtils
 import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.combat.*
 import com.fs.starfarer.api.impl.combat.BaseBattleObjectiveEffect
@@ -8,7 +7,6 @@ import com.fs.starfarer.api.input.InputEventAPI
 import com.fs.starfarer.api.util.IntervalUtil
 import com.fs.starfarer.api.util.Misc
 import com.fs.starfarer.api.util.WeightedRandomPicker
-import com.fs.starfarer.combat.entities.BattleObjective
 import org.dark.shaders.distortion.DistortionShader
 import org.dark.shaders.distortion.RippleDistortion
 import org.dark.shaders.distortion.WaveDistortion
@@ -26,6 +24,8 @@ class SOTFECO_deployWarpObj: BaseBattleObjectiveEffect() {
         const val PRIMARY_RADIUS = 1000f
         const val SECONDARY_RADIUS = 2000f
         const val FINAL_RADIUS = 3000f
+
+        const val CONTEST_RANGE = 2500f
 
         const val MIN_SPAWN_DIST = 100f
         const val MIN_SPAWN_DIST_FRIAGTE = 60f
@@ -60,11 +60,30 @@ class SOTFECO_deployWarpObj: BaseBattleObjectiveEffect() {
         }
         for (member in manager.deployedCopyDFM) {
             val ship = member.ship ?: continue
-            if (ship.isFighter) continue
-            if (!ship.travelDrive.isOn && !ship.isRetreating) continue
-
-            beginWarp(ship)
+            val isTrackingTravel = ship.customData["\$SOTFECO_trackingTravelDrive"] as? Boolean ?: false
+            if (isTrackingTravel) {
+                if (!ship.travelDrive.isOn) {
+                    ship.setCustomData("\$SOTFECO_trackingTravelDrive",  false)
+                    ship.setCustomData("\$SOTFECO_deployedAlready",  true)
+                }
+            } else if (!(ship.customData["\$SOTFECO_deployedAlready"] as? Boolean ?: false)) {
+                ship.setCustomData("\$SOTFECO_trackingTravelDrive", true)
+            }
+            if (canWarp(ship)) {
+                beginWarp(ship)
+            }
         }
+    }
+
+    fun canWarp(ship: ShipAPI): Boolean {
+        if (ship.isFighter) return false
+        if (!ship.isAlive || ship.isHulk) return false
+        if (ship.customData["\$SOTFECO_deployedAlready"] as? Boolean ?: false) return false
+        if (!ship.travelDrive.isOn && !ship.isRetreating) return false
+
+        if (ship.owner != objective.owner) return false
+
+        return true
     }
 
     fun canBeUsed(): Boolean {
@@ -78,10 +97,15 @@ class SOTFECO_deployWarpObj: BaseBattleObjectiveEffect() {
             if (order.type == CombatAssignmentType.RALLY_CIVILIAN) {
                 return false
             }
-            // todo make only defense-targetted objs be used
         }
-        val progress = ReflectionUtils.get("capProgress", objective, BattleObjective::class.java) as Float
-        if (progress > 0f && progress != 20f) return false
+        val nearbyShips = engine.shipGrid.getCheckIterator(objective.location, CONTEST_RANGE, CONTEST_RANGE)
+        while (nearbyShips.hasNext()) {
+            val ship = nearbyShips.next() as ShipAPI
+            if (ship.isFighter || ship.isHulk) continue
+            if (ship.owner != owner) {
+                return false
+            }
+        }
 
         return true
     }

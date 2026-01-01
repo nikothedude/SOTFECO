@@ -1,12 +1,12 @@
 package SOTFECO.combatObj
 
+import SOTFECO.ReflectionUtils
 import SOTFECO.scripts.SOTFECO_flagScript
 import com.fs.starfarer.api.Global
-import com.fs.starfarer.api.util.Misc
-import data.scripts.combat.obj.SotfEmplacementEffect
-import SOTFECO.ReflectionUtils
 import com.fs.starfarer.api.combat.CombatAssignmentType
+import com.fs.starfarer.api.util.Misc
 import com.fs.starfarer.combat.entities.BattleObjective
+import data.scripts.combat.obj.SotfEmplacementEffect
 
 class SOTFCEO_dustkeeperEmplacement: SotfEmplacementEffect() {
 
@@ -44,6 +44,18 @@ class SOTFCEO_dustkeeperEmplacement: SotfEmplacementEffect() {
 
         val engine = Global.getCombatEngine()
         if (engine.isPaused) return
+
+        var noEnemyShips = true
+        for (ship in engine.ships) {
+            if (ship.owner == 1 && !ship.hullSpec.hasTag("sotf_reinforcementship") && !ship.hullSpec
+                    .hasTag("sotf_empl") && !ship.isHulk && !ship.isFighter
+            ) {
+                noEnemyShips = false
+                break
+            }
+        }
+
+        if (noEnemyShips) return
 
         if (!betrayed && SOTFECO_flagScript.dustKeepersHostile()) {
             if (objective.owner != 1) {

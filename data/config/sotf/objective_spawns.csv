@@ -32,7 +32,7 @@ sotfCEO_intrusion_node_dustkeeper,softCEO_objective_cyberwarfare,sotf_theme_dust
 sotfCEO_intrusion_node_system,softCEO_objective_cyberwarfare,,false,,true,SOTFECO_canSpawnIntrusionNode,,120,,0.2
 ,,,,,,,,,,
 softCEO_objective_credit_system,softCEO_objective_credit,,false,false,false,SOTFECO_canSpawnCreditCache,,0,,0.04
-SOTFECO_crackable_asteroid_system,softCEO_objective_asteroid,,false,false,false,SOTFECO_canSpawnAsteroid,,0,,0.07
+SOTFECO_crackable_asteroid_system,softCEO_objective_asteroid,,false,false,false,SOTFECO_canSpawnAsteroid,,0,,0.3
 ,,,,,,,,,,
 softCEO_objective_warp_system,softCEO_objective_warp,,,,false,,,,,0.05
 softCEO_objective_warp_ruins,softCEO_objective_warp,theme_ruins,false,,false,,,,,0.1

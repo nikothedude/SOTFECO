@@ -240,7 +240,7 @@ class SOTFECO_crackableAsteroid: BaseBattleObjectiveEffect() {
                 0f,
                 Color.YELLOW,
                 true,
-                CombatEngineLayers.ASTEROIDS_LAYER,
+                CombatEngineLayers.CAPITAL_SHIPS_LAYER,
             )
 
             if (asteroid.isExpired || !engine.isEntityInPlay(asteroid)) {

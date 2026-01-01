@@ -3,6 +3,7 @@
 Fixed threat/dweller objectives not spawning in places they should, ugh
 Shield generators are no longer penetrated by plasma cannons and such
 Shield generators now use opacity instead of jitter to communicate shield HP
+Intrusion nodes no longer randomly explode
 
 Added a few new objectives
     Credit cache

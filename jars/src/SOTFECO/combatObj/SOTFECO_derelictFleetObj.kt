@@ -17,6 +17,7 @@ import com.fs.starfarer.api.impl.campaign.procgen.SalvageEntityGenDataSpec.DropD
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.SalvageEntity
 import com.fs.starfarer.api.impl.combat.BaseBattleObjectiveEffect
 import com.fs.starfarer.api.input.InputEventAPI
+import com.fs.starfarer.api.loading.VariantSource
 import com.fs.starfarer.api.util.IntervalUtil
 import com.fs.starfarer.api.util.Misc
 import com.fs.starfarer.api.util.WeightedRandomPicker
@@ -39,7 +40,7 @@ class SOTFECO_derelictFleetObj: BaseBattleObjectiveEffect() {
     companion object {
         const val BATTLESIZE_TO_FP_FREIGHTER_MULT = 0.1f
         const val BATTLESIZE_TO_FP_FUEL_MULT = 0.025f
-        const val CIV_FP_TO_COMBAT = 0.2f
+        const val CIV_FP_TO_COMBAT = 0.5f
         const val SPAWN_RADIUS = 2000f
 
         const val VALUE_TO_BP_LOW = 0.02f
@@ -305,6 +306,13 @@ class SOTFECO_derelictFleetObj: BaseBattleObjectiveEffect() {
             member.repairTracker.isMothballed = true
             member.repairTracker.cr = 0f
             member.status.applyDamage(500f, MathUtils.getRandomNumberInRange(0.3f, 0.9f))
+
+            val newVariant = member.variant.clone()
+            newVariant.source = VariantSource.REFIT
+            newVariant.hullVariantId = member.hullId + "_" + Misc.genUID()
+            member.setVariant(newVariant, false, false)
+            newVariant.addMod("SOTFECO_noDP")
+            //member.stats.dynamic.getMod(Stats.DEPLOYMENT_POINTS_MOD).modifyMult("\$SOTFECO_derelictShip", 0f)
         }
 
         this.fleet = fleet
@@ -326,6 +334,8 @@ class SOTFECO_derelictFleetObj: BaseBattleObjectiveEffect() {
                 MathUtils.getRandomNumberInRange(0f, 360f),
                 0f
             )
+            spawned.mutableStats.dynamic.getMod(Stats.DEPLOYMENT_POINTS_MOD).modifyMult("\$SOTFECO_derelictShip", 0f)
+
 
             spawned.fleetMember = member
             for (weapon in spawned.allWeapons) {
@@ -340,8 +350,6 @@ class SOTFECO_derelictFleetObj: BaseBattleObjectiveEffect() {
             ships += spawned
 
             engine.addPlugin(DerelictShipPlugin(spawned))
-
-            spawned.mutableStats.dynamic.getMod(Stats.DEPLOYMENT_POINTS_MOD).modifyMult("\$SOTFECO_derelictShip", 0f)
         }
 
         derelictManager.isSuppressDeploymentMessages = wasSuppressing
@@ -479,6 +487,7 @@ class SOTFECO_derelictFleetObj: BaseBattleObjectiveEffect() {
     }
 
     fun boardShips() {
+
         val owner = objective.owner
         val battle = getBattle()
         val toGain = if (owner == 0) battle.playerSide else battle.nonPlayerSide
@@ -487,12 +496,16 @@ class SOTFECO_derelictFleetObj: BaseBattleObjectiveEffect() {
         for (ship in getViableShips()) {
             ship.owner = owner
             ship.originalOwner = owner
+            ship.captain = null
 
             rejuvinate(ship)
 
             val member = ship.fleetMember
+            member.captain = null
             fleet.fleetData.removeFleetMember(member)
             toGainFleet.fleetData.addFleetMember(member)
+
+            member.variant.removeMod("SOTFECO_noDP")
         }
         fleet.despawn()
 
@@ -669,7 +682,7 @@ class SOTFECO_derelictFleetObj: BaseBattleObjectiveEffect() {
                 return
             }
 
-            val spriteSize = Vector2f(64f, 64f)
+            val spriteSize = Vector2f(128f, 128f)
             val spriteLoc = Vector2f(ship.location)
             spriteLoc.y += ship.collisionRadius * 1.1f
             MagicRender.singleframe(
@@ -809,6 +822,7 @@ class SOTFECO_derelictFleetObj: BaseBattleObjectiveEffect() {
         // runs only once
         override fun advance(amount: Float) {
             for (member in fleet.fleetData.membersListCopy) {
+                member.variant.removeMod("SOTFECO_noDP")
                 if (member in obj.destroyedShips) {
                     fleet.removeFleetMemberWithDestructionFlash(member)
                 } else {
