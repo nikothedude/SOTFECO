@@ -385,7 +385,7 @@ class SOTFECO_deployWarpObj: BaseBattleObjectiveEffect() {
                 Misc.ZERO
             )
 
-            ship.shipAI.forceCircumstanceEvaluation()
+            ship.shipAI?.forceCircumstanceEvaluation()
             ship.extraAlphaMult2 = 1f
         }
     }

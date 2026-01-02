@@ -1,3 +1,7 @@
+1.2.0a
+
+Fixed warp beacons crashing on piloted ships
+
 1.2.0
 
 Fixed threat/dweller objectives not spawning in places they should, ugh
