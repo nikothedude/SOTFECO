@@ -304,7 +304,7 @@ class SOTFECO_deployWarpObj: BaseBattleObjectiveEffect() {
                 }
             }
             if (ship.ai != null) {
-                val nearestEnemy = engine.ships.filter { it.isAlive && !it.isFighter && it.owner != ship.owner }.minBy { MathUtils.getDistance(it, dest) }
+                val nearestEnemy = engine.ships.filter { it.isAlive && !it.isFighter && it.owner != ship.owner }.minByOrNull { MathUtils.getDistance(it, dest) }
                 if (nearestEnemy != null) {
                     ship.facing = VectorUtils.getAngle(ship.location, nearestEnemy.location)
                 }
