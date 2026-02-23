@@ -12,12 +12,14 @@ class SOFTECO_modPlugin: BaseModPlugin() {
     companion object {
         var lunaLibEnabled = false
         var SA_enabled = false
+        var AOTDVaultsEnabled = false
         const val modId = "niko_SOTFMoreCombatObjectives"
     }
 
     override fun onApplicationLoad() {
         lunaLibEnabled = Global.getSettings().modManager.isModEnabled("lunalib")
         SA_enabled = Global.getSettings().modManager.isModEnabled("niko_stationAugments")
+        AOTDVaultsEnabled = Global.getSettings().modManager.isModEnabled("aotd_vok")
 
         if (lunaLibEnabled) {
             LunaSettings.addSettingsListener(settingsChangedListener())

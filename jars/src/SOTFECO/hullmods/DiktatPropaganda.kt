@@ -60,7 +60,6 @@ class DiktatPropaganda: BaseHullMod() {
         val checkIterator = engine.shipGrid.getCheckIterator(ship.location, RANGE, RANGE)
 
         for (ship in affected) {
-            ship.mutableStats.recoilDecayMult.unmodify(MOD_ID)
             ship.mutableStats.recoilPerShotMult.unmodify(MOD_ID)
             ship.mutableStats.recoilDecayMult.unmodify(MOD_ID)
             ship.mutableStats.combatWeaponRepairTimeMult.unmodify(MOD_ID)

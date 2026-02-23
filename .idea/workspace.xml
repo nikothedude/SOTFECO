@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f1eb7bc-6999-4c00-9b3a-f291104d7b7d" name="Changes" comment="more fixes yay">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/LunaLib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/LunaLib.xml" afterDir="false" />
+    <list default="true" id="3f1eb7bc-6999-4c00-9b3a-f291104d7b7d" name="Changes" comment="aaaa">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOTFECO.version" beforeDir="false" afterPath="$PROJECT_DIR$/SOTFECO.version" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changelog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/changelog.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jars/SOTFECO.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jars/SOTFECO.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFECO_deployWarpObj.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFECO_deployWarpObj.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/SOFTECO_modPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/SOFTECO_modPlugin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_dwellerBeacon.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/combatObj/SOTFCEO_dwellerBeacon.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/SOTFECO/hullmods/DiktatPropaganda.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/SOTFECO/hullmods/DiktatPropaganda.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mod_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/mod_info.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,12 +63,12 @@
       </RecentBranches>
     </option>
   </component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/nikothedude/SOTFECO&quot;,
-    &quot;accountId&quot;: &quot;1509c350-b29e-4d93-b5f4-7700d759e134&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/nikothedude/SOTFECO",
+    "accountId": "f226f0a4-01a8-4fff-8bb0-879573ab9a5b"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -153,7 +157,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767297875741</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="aaaa">
+      <option name="closed" value="true" />
+      <created>1771862449939</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1771862449939</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -173,7 +185,8 @@
     <MESSAGE value="forum" />
     <MESSAGE value="ugh" />
     <MESSAGE value="more fixes yay" />
-    <option name="LAST_COMMIT_MESSAGE" value="more fixes yay" />
+    <MESSAGE value="aaaa" />
+    <option name="LAST_COMMIT_MESSAGE" value="aaaa" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

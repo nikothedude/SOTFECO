@@ -1,5 +1,6 @@
 package SOTFECO.combatObj
 
+import SOTFECO.SOFTECO_modPlugin
 import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.campaign.CampaignFleetAPI
 import com.fs.starfarer.api.campaign.FactionAPI
@@ -25,6 +26,14 @@ import org.magiclib.util.MagicRender
 import java.awt.Color
 
 class SOTFCEO_dwellerBeacon: BaseBattleObjectiveEffect() {
+
+    companion object {
+        fun getRewardItemId(): String {
+            if (SOFTECO_modPlugin.AOTDVaultsEnabled) return "aotd_shrouded_substrate"
+            return Items.SHROUDED_SUBSTRATE
+        }
+    }
+
     var isDone: Boolean = false
     private var facing = 0f
 
@@ -390,7 +399,7 @@ class SOTFCEO_dwellerBeacon: BaseBattleObjectiveEffect() {
                 Global.getLogger(this.javaClass)
                     .info("Successfully found an enemy fleet to add Substrate to cargo of: " + mainEnemyFleet.fullName)
                 val extraLoot = Global.getFactory().createCargo(true)
-                extraLoot.addSpecial(SpecialItemData(Items.SHROUDED_SUBSTRATE, null), 1f)
+                extraLoot.addSpecial(SpecialItemData(getRewardItemId(), null), 1f)
                 BaseSalvageSpecial.addExtraSalvage(mainEnemyFleet, extraLoot)
                 //mainEnemyFleet.getCargo().addWeapons(picked.getId(), 1);
                 Global.getLogger(this.javaClass)
