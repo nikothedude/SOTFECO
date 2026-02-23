@@ -1,3 +1,8 @@
+1.2.1
+
+Fixed warp beacons crashing when no targets were around
+Fixed derelict fleet spawning player ships when no player fac exists
+
 1.2.0a
 
 Fixed warp beacons crashing on piloted ships

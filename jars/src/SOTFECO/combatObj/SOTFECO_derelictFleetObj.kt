@@ -30,6 +30,7 @@ import lunalib.lunaExtensions.getMarketsCopy
 import org.lazywizard.lazylib.MathUtils
 import org.lazywizard.lazylib.MathUtils.clamp
 import org.lwjgl.util.vector.Vector2f
+import org.magiclib.kotlin.getFactionMarkets
 import org.magiclib.util.MagicRender
 import java.awt.Color
 import java.lang.invoke.MethodHandles
@@ -123,6 +124,9 @@ class SOTFECO_derelictFleetObj: BaseBattleObjectiveEffect() {
                     }
                     finalFacs += fac
                 }
+                if (Global.getSector().playerFaction.getMarketsCopy().isEmpty()) {
+                    finalFacs -= Global.getSector().getFaction(Factions.PLAYER)
+                }
 
                 return finalFacs
             }
@@ -162,6 +166,9 @@ class SOTFECO_derelictFleetObj: BaseBattleObjectiveEffect() {
                         }
                     }
                     finalFacs += fac
+                }
+                if (Global.getSector().playerFaction.getMarketsCopy().isEmpty()) {
+                    finalFacs -= Global.getSector().getFaction(Factions.PLAYER)
                 }
 
                 return finalFacs
@@ -209,6 +216,9 @@ class SOTFECO_derelictFleetObj: BaseBattleObjectiveEffect() {
                         }
                     }
                     finalFacs += fac
+                }
+                if (Global.getSector().playerFaction.getMarketsCopy().isEmpty()) {
+                    finalFacs -= Global.getSector().getFaction(Factions.PLAYER)
                 }
 
                 return finalFacs
